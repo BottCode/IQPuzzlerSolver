@@ -1,4 +1,4 @@
-from buildShapes import isCoordinateValid
+from Shape.buildShapes import *
 
 class Grid:
     def __init__(self, row, column):
