@@ -1,0 +1,11 @@
+2 00 01 lightgreen T
+1 0001 blue L
+1 010 brown Z
+1 01 white SmallV
+1 0101 purple W
+1 0100 green BigZ
+1 0112 yellow C
+2 000 001 pink Y
+1 000 violet I
+1 0011 chan V
+1 0012 red P
