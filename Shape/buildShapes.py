@@ -4,22 +4,23 @@ import os
 import numpy as np
 
 
-def buildShapes(shapes_path,domains_path, grid):
+def buildShapes(shapes_path,domains_path, grid,fixed_variable):
     shape_array = []
     f = open(shapes_path, "r")
     for line in f:
         words = line.split()
-        i = 0
-        number_of_code = int(words[i])
-        codes_array = []
-        for k in range(number_of_code):
-            code_lst = [int(j) for j in str(words[k+1])] # potrebbe servire str(line[k+1])?
-            codes_array.append(code_lst)
-        i = i + number_of_code
-        color = words[i+1]
-        name = words[i+2]
-        domain = buildDomain(domains_path,codes_array, grid)
-        shape_array.append(Shape(codes_array,color,name, domain))
+        name = words[0]
+        if name not in fixed_variable:
+            i = 1
+            number_of_code = int(words[i])
+            codes_array = []
+            for k in range(number_of_code):
+                code_lst = [int(j) for j in str(words[k+1])]
+                codes_array.append(code_lst)
+            i = i + number_of_code
+            color = words[i+1]
+            domain = buildDomain(domains_path,codes_array, grid)
+            shape_array.append(Shape(codes_array,color,name, domain))
 
     return shape_array
 
@@ -49,7 +50,7 @@ def generateDomain(grid, codes_array):
                 possible3 = possibleDirection(directions, map_shape_to_direction, dir_2)
                 for dir_3 in possible3:
                     map_shape_to_direction[3] = dir_3
-                    print(map_shape_to_direction)
+                    #print(map_shape_to_direction)
                     dom.extend(findPossibleDomain(grid, map_shape_to_direction, codes_array))
 
                     del map_shape_to_direction[3]
@@ -69,7 +70,7 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
             coord = initial_coord
             if isValid:
                 for arc in code:
-                    print("ARC",arc)
+                    #print("ARC",arc)
                     d = map_shape_to_direction[arc]
                     new_coord = (coord[0] + d[0],coord[1] + d[1])
                     if isCoordinateValid(new_coord, grid.row, grid.column):
@@ -86,7 +87,7 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
     return domain
 
 def isCoordinateValid(new_coord,row,column):
-    if (new_coord[0] >= row) or (new_coord[0] < 0) or (new_coord[1] < 0) or (new_coord[1] >= column):
+    if (new_coord[0] >= row) or (new_coord[0] < 0) or (new_coord[1] < 0) or (new_coord[1] >= column): # aggiungere il check se le new_coord sono già occupate da fixed variable
         return False
     return True
 
