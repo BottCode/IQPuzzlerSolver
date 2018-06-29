@@ -9,7 +9,7 @@ def buildShapes(shapes_path,domains_path, grid,fixed_variables):
     shape_array = []
     f = open(shapes_path, "r")
     name_fixed_variables = [shape[2] for shape in fixed_variables]
-    
+
     for line in f:
         words = line.split()
         name = words[0]
@@ -44,7 +44,6 @@ def generateDomain(grid, codes_array):
     dom = []
     directions = [(-1,1),(-1,-1),(1,1),(1,-1)] # UDX, USX, DDX, DSX
     map_shape_to_direction = {}
-
     for dir in directions:
         map_shape_to_direction[0] = dir
         possible1 = possibleDirection(directions, map_shape_to_direction, dir)
@@ -63,7 +62,10 @@ def generateDomain(grid, codes_array):
                 del map_shape_to_direction[2]
             del map_shape_to_direction[1]
 
-    return dom
+    #elimino coordinate duplicate nel dominio
+    dom_set = set(tuple(x) for x in dom)
+    final_domain = [ list(x) for x in dom_set ]
+    return final_domain
 
 def findPossibleDomain(grid, map_shape_to_direction, codes_array):
     domain = []
@@ -88,13 +90,9 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
             else:
                 break
         if isValid:
-            '''g = Grid(grid.row, grid.column)'''''' and (minCC(g, coord_list) > 2)'''
-            #print(coord_list)
-            #print("DOMAIN",domain)
-            if list(coord_list) not in domain:
+            g = Grid(grid.row, grid.column)
+            if (minCC(g, coord_list) > 2):
                 domain.append(list(coord_list))
-            #else:
-                #print("INDOMAINS")
 
     return domain
 

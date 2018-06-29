@@ -1,11 +1,11 @@
 """
  Example program to show using an array to back a grid on-screen.
- 
+
  Sample Python/Pygame Programs
  Simpson College Computer Science
  http://programarcadegames.com/
  http://simpson.edu/computer-science/
- 
+
  Explanation video: http://youtu.be/mdTeqiWyFnc
 """
 import pygame
@@ -33,7 +33,7 @@ map_color_to_id = {
     "brown": 3,
     "white": 4,
     "purple": 5,
-    "green": 6, 
+    "green": 6,
     "yellow": 7,
     "pink": 8,
     "violet": 9,
@@ -60,8 +60,8 @@ map_id_to_color = {
 
 
 # This sets the WIDTH and HEIGHT of each grid location
-WIDTH = 65
-HEIGHT = 65
+WIDTH = 40
+HEIGHT = 40
 COLUMN = 9
 ROW = 11
 
@@ -71,17 +71,17 @@ MARGIN = 5
 # Create a 2 dimensional array. A two dimensional
 # array is simply a list of lists.
 # draw as black box some cells such that final grid contains only diagonal cells
-    
+
 
 def drawSingleShape(shape):
     # print("DISEGNO",shape)
     for coords in shape[1]:
         x = coords[0]
-        y = coords[1] 
+        y = coords[1]
         grid[y][x] = map_color_to_id[shape[0]]
 
 
-def drawSolution(fixed_shape, solution_shape): 
+def drawSolution(fixed_shape, solution_shape):
 
     for row in range(ROW):
         # Add an empty array that will hold each cell
@@ -91,7 +91,7 @@ def drawSolution(fixed_shape, solution_shape):
             grid[row].append(0)  # Append a cell
             if not ((row % 2 == 0 and column % 2 == 0) or (row % 2 == 1 and column % 2 == 1)):
                 grid[row][column] = map_color_to_id["black"]
-    
+
     # Set row 1, cell 5 to one. (Remember rows and
     # column numbers start at zero.)
 
@@ -106,21 +106,21 @@ def drawSolution(fixed_shape, solution_shape):
             x = coords[0]
             y = coords[1]
             grid[y][x] = map_color_to_id[shape[0]]
-        
-    
+
+
     # Initialize pygame
     pygame.init()
-    
+
     # Set the HEIGHT and WIDTH of the screen
     WINDOW_SIZE = [((WIDTH+MARGIN)*COLUMN) + 5, ((HEIGHT+MARGIN) * ROW) + BUTTON_HEIGHT]
     screen = pygame.display.set_mode(WINDOW_SIZE)
-    
+
     # Set title of screen
     pygame.display.set_caption("Array Backed Grid")
-    
+
     # Loop until the user clicks the close button.
     done = False
-    
+
     # Used to manage how fast the screen updates
     clock = pygame.time.Clock()
     shape_drawned_count = 0
@@ -141,7 +141,7 @@ def drawSolution(fixed_shape, solution_shape):
                 # Set that location to one
                 # grid[row][column] = 1
                 # print("Click ", pos, "Grid coordinates: ", row, column)
-    
+
         # Set the screen background
         screen.fill(grey)
 
@@ -152,23 +152,23 @@ def drawSolution(fixed_shape, solution_shape):
             for column in range(COLUMN):
                 #color = white
                 cell = grid[row][column]
-                
+
                 color = map_id_to_color[cell]
                 #print(color)
-                
+
                 pygame.draw.rect(screen,
                                 color,
                                 [(MARGIN + WIDTH) * column + MARGIN,
                                 (MARGIN + HEIGHT) * row + MARGIN,
                                 WIDTH,
                                 HEIGHT])
-    
+
         # Limit to 60 frames per second
         clock.tick(60)
-    
+
         # Go ahead and update the screen with what we've drawn.
         pygame.display.flip()
-    
+
     # Be IDLE friendly. If you forget this line, the program will 'hang'
     # on exit.
     pygame.quit()
