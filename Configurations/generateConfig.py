@@ -13,16 +13,16 @@ def generateConfig(n):
         return _hard1()
 
 def _hard1():
-    return [_T((0,10)), _BigZ((0,0))]
+    return [_T((10,0)), _BigZ((0,0))]
 
 def _medium1():
-    return [_T((0,10)), _BigZ((0,0)), _I((0,2))]
+    return [_T((10,0)), _BigZ((0,0)), _I((2,0))]
 
 def _medium2():
-    return [_C((6,4)), _BigZ((0,0)), _I((0,2))]
+    return [_C((4,6)), _BigZ((0,0)), _I((2,0))]
 
 def _easy1():
-    return [_C((6,4)), _BigZ((0,0)), _I((0,2)), _T((0,10))]
+    return [_C((4,6)), _BigZ((0,0)), _I((2,0)), _T((10,0))]
 
 
 # it generates coordinates of T shape (starting from a starting_coord)
@@ -32,7 +32,7 @@ def _T(starting_coord):
     y = starting_coord[1]
     # if x-2 < 0 or y-1 < 0:
     #     throw ValueError('Error: Invalid starting coord for shape T.')
-    coords.extend([(x,y), (x+1,y-1), (x+2,y-2), (x,y-2)])
+    coords.extend([(x,y), (x-1,y+1), (x-2,y+2), (x-2,y)])
     return Shape([],"lightgreen","T",[coords])
 
 
@@ -42,7 +42,7 @@ def _BigZ(starting_coord):
     y = starting_coord[1]
     # if x+4 >= column or y+2 >= row:
     #     throw ValueError('Error: Invalid starting coord for shape L.')
-    coords.extend([(x,y), (x+1,y+1), (x+2,y), (x+3,y+1), (x+4,y+2)])
+    coords.extend([(x,y), (x+1,y+1), (x,y+2), (x+1,y+3), (x+2,y+4)])
     return Shape([],"green","BigZ",[coords])
 
 def _I(starting_coord):

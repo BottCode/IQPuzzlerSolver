@@ -5,17 +5,15 @@ import numpy as np
 from ConnectedComponent.CC import *
 
 
-def buildShapes(shapes_path,domains_path, grid,fixed_variables):
+def buildShapes(shapes_path, grid,fixed_variables):
     shape_array = []
     f = open(shapes_path, "r")
-    name_fixed_variables = [shape[2] for shape in fixed_variables]
+    name_fixed_variables = [shape.name for shape in fixed_variables]
 
     for line in f:
         words = line.split()
         name = words[0]
         if name not in name_fixed_variables:
-            print("COSTRUISCO",name)
-            print(name_fixed_variables)
             i = 1
             number_of_code = int(words[i])
             codes_array = []
@@ -24,20 +22,10 @@ def buildShapes(shapes_path,domains_path, grid,fixed_variables):
                 codes_array.append(code_lst)
             i = i + number_of_code
             color = words[i+1]
-            print(color)
-            domain = buildDomain(domains_path,codes_array, grid)
+            domain = generateDomain(grid, codes_array)
             shape_array.append(Shape(codes_array,color,name, domain))
 
     return shape_array
-
-
-def buildDomain(domains_path,codes_array, grid):
-    '''if os.path.getsize(domains_path) > 0:
-        dom_file = np.loadtxt(domains_path,delimiter="\t")
-        # i-esima forma è i-esima riga
-        # words = line[i].split()
-    else:'''
-    return generateDomain(grid, codes_array)
 
 
 def generateDomain(grid, codes_array):
@@ -91,8 +79,8 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
                 break
         if isValid:
             g = Grid(grid.row, grid.column)
-            if (minCC(g, coord_list) > 2):
-                domain.append(list(coord_list))
+            #if (minCC(g, coord_list) > 2):
+            domain.append(list(coord_list))
 
     return domain
 

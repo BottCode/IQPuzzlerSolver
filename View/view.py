@@ -73,12 +73,13 @@ MARGIN = 5
 # draw as black box some cells such that final grid contains only diagonal cells
 
 
-def drawSingleShape(shape):
+def drawSingleShape(shape_sol):
     # print("DISEGNO",shape)
-    for coords in shape[1]:
-        x = coords[0]
-        y = coords[1]
-        grid[y][x] = map_color_to_id[shape[0]]
+    for shape in shape_sol.keys():
+        for coords in shape_sol[shape]:
+            x = coords[0]
+            y = coords[1]
+            grid[x][y] = map_color_to_id[shape]
 
 
 def drawSolution(fixed_shape, solution_shape):
@@ -101,11 +102,12 @@ def drawSolution(fixed_shape, solution_shape):
     button = pygame.Rect(0, (HEIGHT+MARGIN) * ROW + 5, BUTTON_WIDTH, BUTTON_HEIGHT)
     # draw fixed shape
     for shape in fixed_shape:
-        #print(map_color_to_id[shape[0]])
-        for coords in shape[1]:
+        #print(map_color_to_id[shape.color])
+        for coords in shape.domain[0]:
             x = coords[0]
             y = coords[1]
-            grid[y][x] = map_color_to_id[shape[0]]
+            print("color", shape.color)
+            grid[x][y] = map_color_to_id[shape.color]
 
 
     # Initialize pygame
@@ -132,7 +134,7 @@ def drawSolution(fixed_shape, solution_shape):
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 # 1 is the left mouse button, 2 is middle, 3 is right.
                 if event.button == 1 and button.collidepoint(event.pos) and shape_drawned_count < len(solution_shape):
-                    drawSingleShape(solution_shape[shape_drawned_count])
+                    drawSingleShape(solution_shape)
                     shape_drawned_count = shape_drawned_count + 1
                 pos = pygame.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates

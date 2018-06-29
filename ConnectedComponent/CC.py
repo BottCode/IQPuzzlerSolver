@@ -22,3 +22,9 @@ def minCC(grid, shape_position):
     if not CC:
         return 0
     return min(len(l) for l in CC)
+
+def checkCoordConstraint(a,b):
+    for el in a:
+        if el in b:
+            return False
+    return True
