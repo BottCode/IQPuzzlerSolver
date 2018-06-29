@@ -5,13 +5,17 @@ import numpy as np
 from ConnectedComponent.CC import *
 
 
-def buildShapes(shapes_path,domains_path, grid,fixed_variable):
+def buildShapes(shapes_path,domains_path, grid,fixed_variables):
     shape_array = []
     f = open(shapes_path, "r")
+    name_fixed_variables = [shape[2] for shape in fixed_variables]
+    
     for line in f:
         words = line.split()
         name = words[0]
-        if name not in fixed_variable:
+        if name not in name_fixed_variables:
+            print("COSTRUISCO",name)
+            print(name_fixed_variables)
             i = 1
             number_of_code = int(words[i])
             codes_array = []
@@ -20,6 +24,7 @@ def buildShapes(shapes_path,domains_path, grid,fixed_variable):
                 codes_array.append(code_lst)
             i = i + number_of_code
             color = words[i+1]
+            print(color)
             domain = buildDomain(domains_path,codes_array, grid)
             shape_array.append(Shape(codes_array,color,name, domain))
 
@@ -85,11 +90,11 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
         if isValid:
             '''g = Grid(grid.row, grid.column)'''''' and (minCC(g, coord_list) > 2)'''
             #print(coord_list)
-            print("DOMAIN",domain)
+            #print("DOMAIN",domain)
             if list(coord_list) not in domain:
                 domain.append(list(coord_list))
-            else:
-                print("INDOMAINS")
+            #else:
+                #print("INDOMAINS")
 
     return domain
 
