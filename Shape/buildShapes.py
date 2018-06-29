@@ -2,6 +2,7 @@ from Shape.shape import *
 from Grid.grid import *
 import os
 import numpy as np
+from ConnectedComponent.CC import *
 
 
 def buildShapes(shapes_path,domains_path, grid,fixed_variable):
@@ -15,7 +16,7 @@ def buildShapes(shapes_path,domains_path, grid,fixed_variable):
             number_of_code = int(words[i])
             codes_array = []
             for k in range(number_of_code):
-                code_lst = [int(j) for j in str(words[k+1])]
+                code_lst = [int(j) for j in str(words[k+2])]
                 codes_array.append(code_lst)
             i = i + number_of_code
             color = words[i+1]
@@ -73,7 +74,7 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
                     #print("ARC",arc)
                     d = map_shape_to_direction[arc]
                     new_coord = (coord[0] + d[0],coord[1] + d[1])
-                    if isCoordinateValid(new_coord, grid.row, grid.column):
+                    if grid.isCoordinateValid(new_coord, grid.row, grid.column):
                         coord_list.add(new_coord)
                         coord = new_coord
                     else:
@@ -82,14 +83,15 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
             else:
                 break
         if isValid:
-            domain.append(list(coord_list))
+            '''g = Grid(grid.row, grid.column)'''''' and (minCC(g, coord_list) > 2)'''
+            #print(coord_list)
+            print("DOMAIN",domain)
+            if list(coord_list) not in domain:
+                domain.append(list(coord_list))
+            else:
+                print("INDOMAINS")
 
     return domain
-
-def isCoordinateValid(new_coord,row,column):
-    if (new_coord[0] >= row) or (new_coord[0] < 0) or (new_coord[1] < 0) or (new_coord[1] >= column): # aggiungere il check se le new_coord sono già occupate da fixed variable
-        return False
-    return True
 
 def possibleDirection(directions, map_shape_to_direction, last_direction):
     #return the possible value after a change of direction
