@@ -2,16 +2,26 @@
 
 from Shape.shape import *
 
-def Hard1():
+def generateConfig(n):
+    if n == 0:
+        return _easy1()
+    elif n == 2:
+        return _medium1()
+    elif n == 3:
+        return _medium2()
+    elif n == 4:
+        return _hard1()
+
+def _hard1():
     return [_T((0,10)), _BigZ((0,0))]
 
-def Medium1():
+def _medium1():
     return [_T((0,10)), _BigZ((0,0)), _I((0,2))]
 
-def Medium2():
+def _medium2():
     return [_C((6,4)), _BigZ((0,0)), _I((0,2))]
 
-def Easy1():
+def _easy1():
     return [_C((6,4)), _BigZ((0,0)), _I((0,2)), _T((0,10))]
 
 

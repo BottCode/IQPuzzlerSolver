@@ -10,65 +10,74 @@
 """
 import pygame
 
+grid = []
+
+# Define some colors
+black = (0, 0, 0)
+lightgreen = (202,255,112)
+brown = (184,134,11)
+white = (255, 255, 255)
+purple = (147,112,219)
+green = (0,128,0)
+yellow = (238,238,0)
+pink = (255,182,193)
+violet = (199,21,133)
+red = (205,0,0)
+grey = (193,205,205)
+
+map_color_to_id = {
+    "black": 1,
+    "lightgreen": 2,
+    "brown": 3,
+    "white": 4,
+    "purple": 5,
+    "green": 6, 
+    "yellow": 7,
+    "pink": 8,
+    "violet": 9,
+    "chan": 10,
+    "red": 11
+}
+
+map_id_to_color = {
+    0: white,
+    1: black,
+    2: lightgreen,
+    3: brown,
+    4: white,
+    5: purple,
+    6: green,
+    7: yellow,
+    8: pink,
+    9: violet,
+    10: red,
+    11: grey
+}
+
+
+# This sets the WIDTH and HEIGHT of each grid location
+WIDTH = 65
+HEIGHT = 65
+COLUMN = 9
+ROW = 11
+
+# This sets the margin between each cell
+MARGIN = 5
+
+# Create a 2 dimensional array. A two dimensional
+# array is simply a list of lists.
+# draw as black box some cells such that final grid contains only diagonal cells
+    
+
+def drawSingleShape(shape):
+    for coords in shape[1]:
+        x = coords[0]
+        y = coords[1] 
+        grid[y][x] = map_color_to_id[shape[0]]
+
+
 def startDraw(fixed_shape): 
-    print("DRAWING")
-    # Define some colors
-    black = (0, 0, 0)
-    lightgreen = (202,255,112)
-    brown = (184,134,11)
-    white = (255, 255, 255)
-    purple = (147,112,219)
-    green = (0,128,0)
-    yellow = (238,238,0)
-    pink = (255,182,193)
-    violet = (199,21,133)
-    red = (205,0,0)
-    grey = (193,205,205)
 
-    map_color_to_id = {
-        "black": 1,
-        "lightgreen": 2,
-        "brown": 3,
-        "white": 4,
-        "purple": 5,
-        "green": 6, 
-        "yellow": 7,
-        "pink": 8,
-        "violet": 9,
-        "chan": 10,
-        "red": 11
-    }
-
-    map_id_to_color = {
-        0: white,
-        1: black,
-        2: lightgreen,
-        3: brown,
-        4: white,
-        5: purple,
-        6: green,
-        7: yellow,
-        8: pink,
-        9: violet,
-        10: red,
-        11: grey
-    }
-    
-    
-    # This sets the WIDTH and HEIGHT of each grid location
-    WIDTH = 65
-    HEIGHT = 65
-    COLUMN = 9
-    ROW = 11
-    
-    # This sets the margin between each cell
-    MARGIN = 5
-    
-    # Create a 2 dimensional array. A two dimensional
-    # array is simply a list of lists.
-    # draw as black box some cells such that final grid contains only diagonal cells
-     
-    grid = []
     for row in range(ROW):
         # Add an empty array that will hold each cell
         # in this row
