@@ -61,6 +61,21 @@ __all__ = ["Problem", "Variable", "Domain", "Unassigned",
            "NotInSetConstraint", "SomeInSetConstraint",
            "SomeNotInSetConstraint"]
 
+# Define some colors
+black = (0, 0, 0)
+lightgreen = (202,255,112)
+brown = (184,134,11)
+white = (245, 245, 245)
+purple = (147,112,219)
+green = (0,128,0)
+yellow = (238,238,0)
+pink = (255,182,193)
+violet = (199,21,133)
+red = (205,0,0)
+grey = (193,205,205)
+cyan = (0,205,205)
+blue = (16,78,139)
+
 MAP_COLOR_TO_ID = {
     "black": 1,
     "lightgreen": 2,
@@ -75,6 +90,46 @@ MAP_COLOR_TO_ID = {
     "red": 11,
     "blue": 12
 }
+
+MAP_ID_TO_COLOR = {
+    0: white,
+    1: black,
+    2: lightgreen,
+    3: brown,
+    4: white,
+    5: purple,
+    6: green,
+    7: yellow,
+    8: pink,
+    9: violet,
+    10: cyan,
+    11: red,
+    12: blue
+}
+
+COLOR_ALREADY_DRAWN = {
+    "black": False,
+    "lightgreen": False,
+    "brown": False,
+    "white": False,
+    "purple": False,
+    "green": False,
+    "yellow": False,
+    "pink": False,
+    "violet": False,
+    "cyan": False,
+    "red": False,
+    "blue": False
+}
+
+# This sets the WIDTH and HEIGHT of each grid location
+WIDTH = 40
+HEIGHT = 40
+COLUMN = 9
+ROW = 11
+
+# This sets the margin between each cell
+MARGIN = 5
 PG = None
 
 class Problem(object):
@@ -93,6 +148,8 @@ class Problem(object):
         self._variables = {}
         self.GRID = []
         self.PG = None
+        self.clock = None
+        self.SCREEN = None
 
     def reset(self):
         """
@@ -208,10 +265,8 @@ class Problem(object):
                 raise ValueError(msg)
         self._constraints.append((constraint, variables))
 
-    def getSolution(self,grid,pg):
+    def getSolution(self,grid,pg,clock,screen):
         print("gg",grid)
-        GRID = grid
-        PG = pg
         """
         Find and return a solution to the problem
         Example:
@@ -228,7 +283,7 @@ class Problem(object):
         domains, constraints, vconstraints = self._getArgs()
         if not domains:
             return None
-        return self._solver.getSolution(domains, constraints, vconstraints,grid,pg)
+        return self._solver.getSolution(domains, constraints, vconstraints,grid,pg,clock,screen)
 
     def getSolutions(self):
         """
@@ -448,8 +503,10 @@ class BacktrackingSolver(Solver):
         self._forwardcheck = forwardcheck
         self.GRID = []
         self.PG = None
+        self.clock = None
+        self.SCREEN = None
 
-    def getSolutionIter(self, domains, constraints, vconstraints,grid):
+    def getSolutionIter(self, domains, constraints, vconstraints,grid,clock,screen):
         forwardcheck = self._forwardcheck
         assignments = {}
 
@@ -516,18 +573,20 @@ class BacktrackingSolver(Solver):
                     for domain in pushdomains:
                         domain.popState()
                 
-                print(variable,"->",assignments[variable])
-                drawCurrentShape(assignments[variable],variable,self.GRID,self.PG) 
+                print(variable,"->",assignments[variable]) 
 
             # Push state before looking for next variable.
             queue.append((variable, values, pushdomains))
+            drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
         raise RuntimeError("Can't happen")
 
-    def getSolution(self, domains, constraints, vconstraints,grid, pg):
+    def getSolution(self, domains, constraints, vconstraints,grid, pg,clock,screen):
         print("first backtracking")
         self.GRID = grid
         self.PG = pg
-        iter = self.getSolutionIter(domains, constraints, vconstraints,grid)
+        self.CLOCK = clock
+        self.SCREEN = screen
+        iter = self.getSolutionIter(domains, constraints, vconstraints,grid,clock,screen)
         try:
             return next(iter)
         except StopIteration:
@@ -1399,18 +1458,42 @@ class SomeNotInSetConstraint(Constraint):
                     return False
         return True
 
-def drawCurrentShape(position,variable,grid,pg):
+def drawCurrentShape(position,variable,grid,pg,clock,screen):
         # print("DISEGNO",shape)
-        print(len(grid))
+        #print(len(grid))
+        if COLOR_ALREADY_DRAWN[variable]:
+            print("RIDISPONGO ",variable)
+            # remove shape from grid
+            id_color_to_remove = MAP_COLOR_TO_ID[variable]
+            for row in range(ROW):
+                for column in range(COLUMN):
+                    if grid[row][column] == id_color_to_remove:
+                        grid[row][column] = MAP_COLOR_TO_ID["white"]  
+        COLOR_ALREADY_DRAWN[variable] = True
+        pg.display.flip()
+        print("piazzo ",variable)
         for coords in position:
             x = coords[0]
             y = coords[1]
-            grid[x][y] = MAP_COLOR_TO_ID[variable]
+            grid[x][y] = MAP_COLOR_TO_ID[variable] 
+        
+        for row in range(ROW):
+            for column in range(COLUMN):
+                #color = white
+                cell = grid[row][column]
+
+                color = MAP_ID_TO_COLOR[cell]
+                #print(color)
+
+                pg.draw.rect(screen,
+                                color,
+                                [(MARGIN + WIDTH) * column + MARGIN,
+                                (MARGIN + HEIGHT) * row + MARGIN,
+                                WIDTH,
+                                HEIGHT])   
         pg.display.flip()
-        pg.display.update()
-        print("dormo...")
-        time.sleep(0.5)
-        print("...sveglio")
+        #time.sleep(0.5)
+
 
 
 if __name__ == "__main__":

@@ -124,6 +124,7 @@ def startingDraw(fixed_shape, shape_array):
 
     # Used to manage how fast the screen updates
     clock = PG.time.Clock()
+    clock.tick(60)
     shape_drawned_count = 0
     # -------- Main Program Loop -----------
     while not done:
@@ -133,7 +134,7 @@ def startingDraw(fixed_shape, shape_array):
             elif event.type == PG.MOUSEBUTTONDOWN:
                 # 1 is the left mouse button, 2 is middle, 3 is right.
                 if event.button == 1 and button.collidepoint(event.pos):
-                    CSPSolver(shape_array,1,grid,PG)
+                    CSPSolver(shape_array,1,grid,PG,clock,screen)
                 pos = PG.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates
                 column = pos[0] // (WIDTH + MARGIN)
@@ -162,9 +163,6 @@ def startingDraw(fixed_shape, shape_array):
                                 (MARGIN + HEIGHT) * row + MARGIN,
                                 WIDTH,
                                 HEIGHT])
-
-        # Limit to 60 frames per second
-        clock.tick(60)
 
         # Go ahead and update the screen with what we've drawn.
         PG.display.flip()
