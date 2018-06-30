@@ -1,8 +1,21 @@
 # this script is used exclusively to generate starting configurations of the game
 
 from Shape.shape import *
+from Shape.buildShapes import *
+from Grid.grid import *
 
-def generateConfig(n):
+def getConfig(n,path):
+    grid = Grid(11,9)
+    fixed_variables = []
+    shape_array = []
+    for shape in _generateConfig(n):
+        fixed_variables.append(shape)
+        shape_array.append(shape)
+    shape_array.extend(buildShapes(path,grid,fixed_variables))
+    return (fixed_variables,shape_array)
+
+
+def _generateConfig(n):
     if n == 0:
         return _easy1()
     elif n == 1:
@@ -15,7 +28,7 @@ def generateConfig(n):
         return _medium3()
     elif n == 5:
         return _hard1()
-    elif n == 6:    
+    else:    
         return _hardest()
 
 def _hardest():

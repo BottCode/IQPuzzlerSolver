@@ -106,7 +106,7 @@ def drawSolution(fixed_shape, solution_shape):
         for coords in shape.domain[0]:
             x = coords[0]
             y = coords[1]
-            print("color", shape.color)
+            # print("color", shape.color)
             grid[x][y] = map_color_to_id[shape.color]
 
 

@@ -1,45 +1,26 @@
-from Grid.grid import *
-from Shape.shape import *
-from Shape.buildShapes import *
-from Configurations.generateConfig import generateConfig
-from constraint import *
+from Configurations.generateConfig import getConfig
+from CSPSolver.CSPSolver import CSPSolver
+from DFSSolver.DFSSolver import DFSSolver
 from View.view import *
-from ConnectedComponent.CC import *
 
-difficulty = 4 # difficulty in range(7)
-fixed_variables = []
-problem = Problem()
-array_shape = []
-
-for shape in generateConfig(difficulty):
-    fixed_variables.append(shape)
-    array_shape.append(shape)
-    # the allowed value for the variable is the only value which exists in its domain
-    #problem.addConstraint(lambda v : v == shape.domain[0], shape.name)
-# startDraw(fixed_variables)
 
 path = './shape_code.txt'
-grid = Grid(11,9)
-array_shape.extend(buildShapes(path,grid,fixed_variables))
 
-for shape in array_shape:
-    print(shape.name)
-    problem.addVariable(shape.color, shape.domain)
-    problem.addConstraint(lambda v : minCC(Grid(11,9), v) > 2, [shape.color])
+# difficulty in range(7)
+
+difficulty = int(input("Select difficulty level from 0 to 6: "))
+solution_choice = int(input("Select how to solve IQPuzzler \n 1: DFS \n 2: Deafult Backtracking \n 3: MinConflicts Backtracking \n"))
+domain_choice = int(input("Would you prefer a smart domain generation?\n 0: No \n 1: Yes \n"))
+
+fixed_variables, shape_array = getConfig(difficulty,path)
 
 
-for i in range(len(array_shape)):
-    for j in range(i+1, len(array_shape)):
-        problem.addConstraint(lambda a,b: checkCoordConstraint(a,b), [array_shape[i].color, array_shape[j].color])
-
-solution = problem.getSolution()
-print(solution)
-
+if solution_choice == 1:
+    solution = DFSSolver(shape_array) 
+else:
+    solution = CSPSolver(shape_array,solution_choice) 
+    
 drawSolution(fixed_variables, solution)
-
-# drawSingleShape((array[0].color,array[0].domain[0]))
-
-#def sillySolver(fixed_variables,array):
 
 
 #print(array[0].domain)
