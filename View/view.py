@@ -16,7 +16,7 @@ grid = []
 black = (0, 0, 0)
 lightgreen = (202,255,112)
 brown = (184,134,11)
-white = (255, 255, 255)
+white = (245, 245, 245)
 purple = (147,112,219)
 green = (0,128,0)
 yellow = (238,238,0)
@@ -133,7 +133,7 @@ def drawSolution(fixed_shape, solution_shape):
                 done = True  # Flag that we are done so we exit this loop
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 # 1 is the left mouse button, 2 is middle, 3 is right.
-                if event.button == 1 and button.collidepoint(event.pos) and shape_drawned_count < len(solution_shape):
+                if event.button == 1 and button.collidepoint(event.pos):
                     drawSingleShape(solution_shape)
                     shape_drawned_count = shape_drawned_count + 1
                 pos = pygame.mouse.get_pos()

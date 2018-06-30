@@ -6,7 +6,7 @@ from constraint import *
 from View.view import *
 from ConnectedComponent.CC import *
 
-difficulty = 4 # difficulty in range(6)
+difficulty = 4 # difficulty in range(7)
 fixed_variables = []
 problem = Problem()
 array_shape = []
