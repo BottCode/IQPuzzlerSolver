@@ -1,8 +1,8 @@
-from constraint import *
+from pythonConstraint import * 
 from ConnectedComponent.CC import minCC, checkCoordConstraint
 
 
-def CSPSolver(shape_array, csp_type_choice):
+def CSPSolver(shape_array, csp_type_choice,grid, PG):
     problem = Problem()
     for shape in shape_array:
         #print(shape.name)
@@ -13,4 +13,4 @@ def CSPSolver(shape_array, csp_type_choice):
         for j in range(i+1, len(shape_array)):
             problem.addConstraint(lambda a,b: checkCoordConstraint(a,b), [shape_array[i].color, shape_array[j].color])
 
-    return problem.getSolution()    
+    return problem.getSolution(grid,PG)    
