@@ -8,7 +8,7 @@ path = './shape_code.txt'
 solution = []
 
 # difficulty in range(7)
-difficulty = int(input("Select difficulty level from 0 to 6: "))
+difficulty = int(input("Select difficulty level from 0 to 4: "))
 solution_choice = int(input("Select how to solve IQPuzzler \n 1: DFS \n 2: Deafult Backtracking \n 3: Recursive Backtracking \n 4: MinConflicts Backtracking \n"))
 
 fixed_variables, shape_array = getConfig(difficulty,path)

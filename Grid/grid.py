@@ -26,7 +26,8 @@ class Grid:
                 if coord in self.adj_list[key]:
                     self.adj_list[key].remove(coord)
             del self.adj_list[coord]
-        
+            self.coordinates.remove(coord)
+
     def isCoordinateValid(self, new_coord):
         if new_coord not in list(self.adj_list.keys()): # aggiungere il check se le new_coord sono già occupate da fixed variable
             return False

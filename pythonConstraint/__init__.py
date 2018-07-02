@@ -736,8 +736,8 @@ class MinConflictsSolver(Solver):
         # Initial assignment
         for variable in domains:
             assignments[variable] = random.choice(domains[variable])
-            drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
-        for _ in xrange(self._steps):
+            drawCurrentShapeMinConflict(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+        while True:
             conflicted = False
             lst = list(domains.keys())
             random.shuffle(lst)
@@ -765,7 +765,7 @@ class MinConflictsSolver(Solver):
                         minvalues.append(value)
                 # Pick a random one from these values.
                 assignments[variable] = random.choice(minvalues)
-                drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+                drawCurrentShapeMinConflict(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
 
                 conflicted = True
             if not conflicted:
@@ -1476,52 +1476,88 @@ class SomeNotInSetConstraint(Constraint):
         return True
 
 def drawCurrentShape(position,variable,grid,pg,clock,screen):
-        # print("DISEGNO",shape)
-        # print(len(grid))
+    # print("DISEGNO",shape)
+    # print(len(grid))
 
-        if COLOR_ALREADY_DRAWN[variable]:
-            # print("RIDISPONGO ",variable)
-            # remove shape from grid
-            id_color_to_remove = MAP_COLOR_TO_ID[variable]
+    if COLOR_ALREADY_DRAWN[variable]:
+        # print("RIDISPONGO ",variable)
+        # remove shape from grid
+        id_color_to_remove = MAP_COLOR_TO_ID[variable]
+        for row in range(ROW):
+            for column in range(COLUMN):
+                if grid[row][column] == id_color_to_remove:
+                    grid[row][column] = MAP_COLOR_TO_ID["white"]
+    COLOR_ALREADY_DRAWN[variable] = True
+    pg.display.flip()
+    # print("piazzo ",variable)
+    for coords in position:
+        x = coords[0]
+        y = coords[1]
+        if MAP_ID_TO_COLOR[grid[x][y]] != "white":
+            id_color_to_remove = grid[x][y]
+            #print(variable,"sovrapposto a",MAP_ID_TO_COLOR[id_color_to_remove])
             for row in range(ROW):
                 for column in range(COLUMN):
                     if grid[row][column] == id_color_to_remove:
                         grid[row][column] = MAP_COLOR_TO_ID["white"]
-        COLOR_ALREADY_DRAWN[variable] = True
-        pg.display.flip()
-        # print("piazzo ",variable)
-        for coords in position:
-            x = coords[0]
-            y = coords[1]
-            if MAP_ID_TO_COLOR[grid[x][y]] != "white":
-                id_color_to_remove = grid[x][y]
-                #print(variable,"sovrapposto a",MAP_ID_TO_COLOR[id_color_to_remove])
-                for row in range(ROW):
-                    for column in range(COLUMN):
-                        if grid[row][column] == id_color_to_remove:
-                            grid[row][column] = MAP_COLOR_TO_ID["white"]
 
 
-            grid[x][y] = MAP_COLOR_TO_ID[variable]
+        grid[x][y] = MAP_COLOR_TO_ID[variable]
 
+    for row in range(ROW):
+        for column in range(COLUMN):
+            #color = white
+            cell = grid[row][column]
+
+            color = MAP_ID_TO_COLOR[cell]
+            #print(color)
+
+            pg.draw.rect(screen,
+                            color,
+                            [(MARGIN + WIDTH) * column + MARGIN,
+                            (MARGIN + HEIGHT) * row + MARGIN,
+                            WIDTH,
+                            HEIGHT])
+    pg.display.flip()
+    #time.sleep(1)
+
+def drawCurrentShapeMinConflict(position,variable,grid,pg,clock,screen):
+    # print("DISEGNO",shape)
+    # print(len(grid))
+
+    if COLOR_ALREADY_DRAWN[variable]:
+        # print("RIDISPONGO ",variable)
+        # remove shape from grid
+        id_color_to_remove = MAP_COLOR_TO_ID[variable]
         for row in range(ROW):
             for column in range(COLUMN):
-                #color = white
-                cell = grid[row][column]
+                if grid[row][column] == id_color_to_remove:
+                    grid[row][column] = MAP_COLOR_TO_ID["white"]
+    COLOR_ALREADY_DRAWN[variable] = True
+    pg.display.flip()
+    # print("piazzo ",variable)
 
-                color = MAP_ID_TO_COLOR[cell]
-                #print(color)
+    for coords in position:
+        x = coords[0]
+        y = coords[1]
+        grid[x][y] = MAP_COLOR_TO_ID[variable]
 
-                pg.draw.rect(screen,
-                                color,
-                                [(MARGIN + WIDTH) * column + MARGIN,
-                                (MARGIN + HEIGHT) * row + MARGIN,
-                                WIDTH,
-                                HEIGHT])
-        pg.display.flip()
-        time.sleep(1)
+    for row in range(ROW):
+        for column in range(COLUMN):
+            #color = white
+            cell = grid[row][column]
 
+            color = MAP_ID_TO_COLOR[cell]
+            #print(color)
 
+            pg.draw.rect(screen,
+                            color,
+                            [(MARGIN + WIDTH) * column + MARGIN,
+                            (MARGIN + HEIGHT) * row + MARGIN,
+                            WIDTH,
+                            HEIGHT])
+    pg.display.flip()
+    #time.sleep(1)
 
 if __name__ == "__main__":
     import doctest
