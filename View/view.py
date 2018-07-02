@@ -82,7 +82,7 @@ def drawCurrentShape(shape):
         grid[x][y] = map_color_to_id[shape[1]]
 
 
-def startingDraw(fixed_shape, shape_array):
+def startingDraw(fixed_shape, shape_array, solution_choice):
 
     for row in range(ROW):
         # Add an empty array that will hold each cell
@@ -135,8 +135,11 @@ def startingDraw(fixed_shape, shape_array):
             elif event.type == PG.MOUSEBUTTONDOWN:
                 # 1 is the left mouse button, 2 is middle, 3 is right.
                 if event.button == 1 and button.collidepoint(event.pos):
-                    #CSPSolver(shape_array,1,grid,PG,clock,screen)
-                    DFSSolver(shape_array,fixed_shape,grid,PG,screen)
+                    if solution_choice == 1:
+                        DFSSolver(shape_array,fixed_shape,grid,PG,screen)
+                    else:
+                        CSPSolver(shape_array,solution_choice,grid,PG,clock,screen)
+
                 pos = PG.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates
                 column = pos[0] // (WIDTH + MARGIN)
