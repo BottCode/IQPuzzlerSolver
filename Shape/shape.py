@@ -5,16 +5,3 @@ class Shape:
         self.color = color
         self.name = name
         self.domain = domain
-
-    def deleteDomainValue(self, position):
-        new_domain = []
-        for value in self.domain:
-            isValid = True
-            for coord in value:
-                if coord in position:
-                    isValid = False
-                    break
-            if isValid:
-                new_domain.append(value)
-                
-        return new_domain

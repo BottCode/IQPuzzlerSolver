@@ -52,9 +52,20 @@ def generateDomain(grid, codes_array):
             del map_shape_to_direction[1]
 
     #elimino coordinate duplicate nel dominio
-    dom_set = set(tuple(x) for x in dom)
-    final_domain = [ list(x) for x in dom_set ]
-    print(len(final_domain))
+
+    toDelete = set()
+    for x in range(len(dom)):
+        for j in range(x+1,len(dom)):
+
+            if all(elem in dom[j] for elem in dom[x]):
+                toDelete.add(j)
+                
+    final_domain = []
+    for x in range(len(dom)):
+        if x not in toDelete:
+            final_domain.append(dom[x])
+
+    print("FINE", len(final_domain))
     return final_domain
 
 def findPossibleDomain(grid, map_shape_to_direction, codes_array):
@@ -80,12 +91,6 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
             else:
                 break
         if isValid:
-            '''alreadyInDomain = False
-            for x in domain:
-                if all(elem in tuple(coord_list) for elem in list(itertools.permutations(x))):
-                    alreadyInDomain = True
-                    break
-            if not alreadyInDomain:'''
             domain.append(list(coord_list))
 
     return domain
