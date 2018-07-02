@@ -266,7 +266,7 @@ class Problem(object):
         self._constraints.append((constraint, variables))
 
     def getSolution(self,grid,pg,clock,screen):
-        print("gg",grid)
+        # print("gg",grid)
         """
         Find and return a solution to the problem
         Example:
@@ -503,7 +503,6 @@ class BacktrackingSolver(Solver):
         self._forwardcheck = forwardcheck
         self.GRID = []
         self.PG = None
-        self.clock = None
         self.SCREEN = None
 
     def getSolutionIter(self, domains, constraints, vconstraints,grid,clock,screen):
@@ -573,7 +572,7 @@ class BacktrackingSolver(Solver):
                     for domain in pushdomains:
                         domain.popState()
 
-                print(variable,"->",assignments[variable])
+                # print(variable,"->",assignments[variable])
 
             # Push state before looking for next variable.
             queue.append((variable, values, pushdomains))
@@ -581,7 +580,7 @@ class BacktrackingSolver(Solver):
         raise RuntimeError("Can't happen")
 
     def getSolution(self, domains, constraints, vconstraints,grid, pg,clock,screen):
-        print("first backtracking")
+        # print("first backtracking")
         self.GRID = grid
         self.PG = pg
         self.CLOCK = clock
@@ -628,9 +627,12 @@ class RecursiveBacktrackingSolver(Solver):
         @type  forwardcheck: bool
         """
         self._forwardcheck = forwardcheck
+        self.GRID = []
+        self.PG = None
+        self.SCREEN = None
 
     def recursiveBacktracking(self, solutions, domains, vconstraints,
-                              assignments, single):
+                              assignments, single,grid,pg,clock,screen):
 
         # Mix the Degree and Minimum Remaing Values (MRV) heuristics
         lst = [(-len(vconstraints[variable]),
@@ -666,6 +668,7 @@ class RecursiveBacktrackingSolver(Solver):
                     break
             else:
                 # Value is good. Recurse and get next variable.
+                drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)            
                 self.recursiveBacktracking(solutions, domains, vconstraints,
                                            assignments, single)
                 if solutions and single:
@@ -676,9 +679,8 @@ class RecursiveBacktrackingSolver(Solver):
         del assignments[variable]
         return solutions
 
-    def getSolution(self, domains, constraints, vconstraints):
-        solutions = self.recursiveBacktracking([], domains, vconstraints,
-                                               {}, True)
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen):
+        solutions = self.recursiveBacktracking([], domains, vconstraints,{}, True,grid,pg,clock,screen)
         return solutions and solutions[0] or None
 
     def getSolutions(self, domains, constraints, vconstraints):
@@ -716,12 +718,16 @@ class MinConflictsSolver(Solver):
         @type  steps: int
         """
         self._steps = steps
+        self.GRID = []
+        self.PG = None
+        self.SCREEN = None
 
-    def getSolution(self, domains, constraints, vconstraints):
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen):
         assignments = {}
         # Initial assignment
         for variable in domains:
             assignments[variable] = random.choice(domains[variable])
+            drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)            
         for _ in xrange(self._steps):
             conflicted = False
             lst = list(domains.keys())
@@ -750,6 +756,8 @@ class MinConflictsSolver(Solver):
                         minvalues.append(value)
                 # Pick a random one from these values.
                 assignments[variable] = random.choice(minvalues)
+                drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+                    
                 conflicted = True
             if not conflicted:
                 return assignments
@@ -1460,7 +1468,8 @@ class SomeNotInSetConstraint(Constraint):
 
 def drawCurrentShape(position,variable,grid,pg,clock,screen):
         # print("DISEGNO",shape)
-        #print(len(grid))
+        # print(len(grid))
+
         if COLOR_ALREADY_DRAWN[variable]:
             # print("RIDISPONGO ",variable)
             # remove shape from grid
@@ -1475,6 +1484,15 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
         for coords in position:
             x = coords[0]
             y = coords[1]
+            if MAP_ID_TO_COLOR[grid[x][y]] != "white":
+                id_color_to_remove = grid[x][y]
+                #print(variable,"sovrapposto a",MAP_ID_TO_COLOR[id_color_to_remove])
+                for row in range(ROW):
+                    for column in range(COLUMN):
+                        if grid[row][column] == id_color_to_remove:
+                            grid[row][column] = MAP_COLOR_TO_ID["white"]
+                
+
             grid[x][y] = MAP_COLOR_TO_ID[variable]
 
         for row in range(ROW):
