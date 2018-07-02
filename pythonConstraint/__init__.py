@@ -1462,7 +1462,7 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
         # print("DISEGNO",shape)
         #print(len(grid))
         if COLOR_ALREADY_DRAWN[variable]:
-            print("RIDISPONGO ",variable)
+            # print("RIDISPONGO ",variable)
             # remove shape from grid
             id_color_to_remove = MAP_COLOR_TO_ID[variable]
             for row in range(ROW):
@@ -1471,7 +1471,7 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
                         grid[row][column] = MAP_COLOR_TO_ID["white"]
         COLOR_ALREADY_DRAWN[variable] = True
         pg.display.flip()
-        print("piazzo ",variable)
+        # print("piazzo ",variable)
         for coords in position:
             x = coords[0]
             y = coords[1]
