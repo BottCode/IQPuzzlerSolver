@@ -630,6 +630,7 @@ class RecursiveBacktrackingSolver(Solver):
         self.GRID = []
         self.PG = None
         self.SCREEN = None
+        self.CLOCK = None
 
     def recursiveBacktracking(self, solutions, domains, vconstraints,
                               assignments, single,grid,pg,clock,screen):
@@ -668,9 +669,9 @@ class RecursiveBacktrackingSolver(Solver):
                     break
             else:
                 # Value is good. Recurse and get next variable.
-                drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)            
+                drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
                 self.recursiveBacktracking(solutions, domains, vconstraints,
-                                           assignments, single)
+                                           assignments, single,grid,pg,clock,screen)
                 if solutions and single:
                     return solutions
             if pushdomains:
@@ -680,6 +681,10 @@ class RecursiveBacktrackingSolver(Solver):
         return solutions
 
     def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen):
+        self.GRID = grid
+        self.PG = pg
+        self.SCREEN = screen
+
         solutions = self.recursiveBacktracking([], domains, vconstraints,{}, True,grid,pg,clock,screen)
         return solutions and solutions[0] or None
 
@@ -721,13 +726,17 @@ class MinConflictsSolver(Solver):
         self.GRID = []
         self.PG = None
         self.SCREEN = None
+        self.CLOCK = None
 
     def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen):
+        self.GRID = grid
+        self.PG = pg
+        self.SCREEN = screen
         assignments = {}
         # Initial assignment
         for variable in domains:
             assignments[variable] = random.choice(domains[variable])
-            drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)            
+            drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
         for _ in xrange(self._steps):
             conflicted = False
             lst = list(domains.keys())
@@ -757,7 +766,7 @@ class MinConflictsSolver(Solver):
                 # Pick a random one from these values.
                 assignments[variable] = random.choice(minvalues)
                 drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
-                    
+
                 conflicted = True
             if not conflicted:
                 return assignments
@@ -1491,7 +1500,7 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
                     for column in range(COLUMN):
                         if grid[row][column] == id_color_to_remove:
                             grid[row][column] = MAP_COLOR_TO_ID["white"]
-                
+
 
             grid[x][y] = MAP_COLOR_TO_ID[variable]
 
@@ -1510,7 +1519,7 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
                                 WIDTH,
                                 HEIGHT])
         pg.display.flip()
-        #time.sleep(0.5)
+        time.sleep(1)
 
 
 

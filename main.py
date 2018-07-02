@@ -13,7 +13,6 @@ solution_choice = int(input("Select how to solve IQPuzzler \n 1: DFS \n 2: Deafu
 
 fixed_variables, shape_array = getConfig(difficulty,path)
 
-
 startingDraw(fixed_variables, shape_array, solution_choice)
 
 '''

@@ -59,7 +59,7 @@ def generateDomain(grid, codes_array):
 
             if all(elem in dom[j] for elem in dom[x]):
                 toDelete.add(j)
-                
+
     final_domain = []
     for x in range(len(dom)):
         if x not in toDelete:
@@ -82,7 +82,7 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
                     #print("ARC",arc)
                     d = map_shape_to_direction[arc]
                     new_coord = (coord[0] + d[0],coord[1] + d[1])
-                    if grid.isCoordinateValid(new_coord, grid.row, grid.column):
+                    if grid.isCoordinateValid(new_coord):
                         coord_list.add(new_coord)
                         coord = new_coord
                     else:
