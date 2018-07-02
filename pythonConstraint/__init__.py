@@ -466,7 +466,7 @@ class Solver(object):
         msg = "%s doesn't provide iteration" % self.__class__.__name__
         raise NotImplementedError(msg)
 
-    
+
 
 class BacktrackingSolver(Solver):
     """
@@ -572,8 +572,8 @@ class BacktrackingSolver(Solver):
                 if pushdomains:
                     for domain in pushdomains:
                         domain.popState()
-                
-                print(variable,"->",assignments[variable]) 
+
+                print(variable,"->",assignments[variable])
 
             # Push state before looking for next variable.
             queue.append((variable, values, pushdomains))
@@ -1468,15 +1468,15 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
             for row in range(ROW):
                 for column in range(COLUMN):
                     if grid[row][column] == id_color_to_remove:
-                        grid[row][column] = MAP_COLOR_TO_ID["white"]  
+                        grid[row][column] = MAP_COLOR_TO_ID["white"]
         COLOR_ALREADY_DRAWN[variable] = True
         pg.display.flip()
         print("piazzo ",variable)
         for coords in position:
             x = coords[0]
             y = coords[1]
-            grid[x][y] = MAP_COLOR_TO_ID[variable] 
-        
+            grid[x][y] = MAP_COLOR_TO_ID[variable]
+
         for row in range(ROW):
             for column in range(COLUMN):
                 #color = white
@@ -1490,7 +1490,7 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
                                 [(MARGIN + WIDTH) * column + MARGIN,
                                 (MARGIN + HEIGHT) * row + MARGIN,
                                 WIDTH,
-                                HEIGHT])   
+                                HEIGHT])
         pg.display.flip()
         #time.sleep(0.5)
 

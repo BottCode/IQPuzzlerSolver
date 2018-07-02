@@ -11,6 +11,7 @@ def getConfig(n,path):
     for shape in _generateConfig(n):
         fixed_variables.append(shape)
         shape_array.append(shape)
+        grid.deleteShapePosition(shape.domain[0])
     shape_array.extend(buildShapes(path,grid,fixed_variables))
     return (fixed_variables,shape_array)
 
@@ -28,7 +29,7 @@ def _generateConfig(n):
         return _medium3()
     elif n == 5:
         return _hard1()
-    else:    
+    else:
         return _hardest()
 
 def _hardest():

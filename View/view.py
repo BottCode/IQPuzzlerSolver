@@ -8,8 +8,9 @@
 
  Explanation video: http://youtu.be/mdTeqiWyFnc
 """
-import pygame as PG 
+import pygame as PG
 from CSPSolver.CSPSolver import CSPSolver
+from DFSSolver.DFSSolver import *
 
 
 grid = []
@@ -74,7 +75,7 @@ MARGIN = 5
 # array is simply a list of lists.
 # draw as black box some cells such that final grid contains only diagonal cells
 
-def drawCurrentShape(shape): 
+def drawCurrentShape(shape):
     for coords in shape[0]:
         x = coords[0]
         y = coords[1]
@@ -134,7 +135,8 @@ def startingDraw(fixed_shape, shape_array):
             elif event.type == PG.MOUSEBUTTONDOWN:
                 # 1 is the left mouse button, 2 is middle, 3 is right.
                 if event.button == 1 and button.collidepoint(event.pos):
-                    CSPSolver(shape_array,1,grid,PG,clock,screen)
+                    #CSPSolver(shape_array,1,grid,PG,clock,screen)
+                    DFSSolver(shape_array,fixed_shape,grid,PG,screen)
                 pos = PG.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates
                 column = pos[0] // (WIDTH + MARGIN)

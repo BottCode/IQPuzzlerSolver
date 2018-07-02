@@ -3,6 +3,7 @@ from Grid.grid import *
 import os
 import numpy as np
 from ConnectedComponent.CC import *
+import itertools
 
 
 def buildShapes(shapes_path, grid,fixed_variables):
@@ -53,6 +54,7 @@ def generateDomain(grid, codes_array):
     #elimino coordinate duplicate nel dominio
     dom_set = set(tuple(x) for x in dom)
     final_domain = [ list(x) for x in dom_set ]
+    print(len(final_domain))
     return final_domain
 
 def findPossibleDomain(grid, map_shape_to_direction, codes_array):
@@ -78,8 +80,12 @@ def findPossibleDomain(grid, map_shape_to_direction, codes_array):
             else:
                 break
         if isValid:
-            g = Grid(grid.row, grid.column)
-            #if (minCC(g, coord_list) > 2):
+            '''alreadyInDomain = False
+            for x in domain:
+                if all(elem in tuple(coord_list) for elem in list(itertools.permutations(x))):
+                    alreadyInDomain = True
+                    break
+            if not alreadyInDomain:'''
             domain.append(list(coord_list))
 
     return domain
