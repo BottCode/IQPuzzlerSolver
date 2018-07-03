@@ -36,7 +36,7 @@ def isConsistent(value, assignment, shape_array, min_cc_choice):
 
     if min_cc_choice:
         min_dimension = min([var.dimension for var in shape_array])
-        
+
         partial_assignment = [x[1] for x in assignment] + [value]
         if 0 < minCC(partial_assignment) < min_dimension:
             return False

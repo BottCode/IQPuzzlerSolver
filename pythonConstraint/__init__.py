@@ -592,7 +592,7 @@ class BacktrackingSolver(Solver):
 
             # Push state before looking for next variable.
             queue.append((variable, values, pushdomains))
-            drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+            drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
         raise RuntimeError("Can't happen")
 
     def getSolution(self, domains, constraints, vconstraints,grid, pg,clock,screen,min_cc_choice):
@@ -699,7 +699,7 @@ class RecursiveBacktrackingSolver(Solver):
                     break
             else:
                 # Value is good. Recurse and get next variable.
-                drawCurrentShape(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+                drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
                 self.recursiveBacktracking(solutions, domains, vconstraints,
                                            assignments, single,grid,pg,clock,screen,min_cc_choice)
                 if solutions and single:
@@ -758,7 +758,7 @@ class MinConflictsSolver(Solver):
         self.SCREEN = None
         self.CLOCK = None
 
-    def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen):
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen, min_cc_choice):
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
@@ -766,8 +766,10 @@ class MinConflictsSolver(Solver):
         # Initial assignment
         for variable in domains:
             assignments[variable] = random.choice(domains[variable])
-            drawCurrentShapeMinConflict(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
-        while True:
+
+        drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+
+        for _ in xrange(self._steps):
             conflicted = False
             lst = list(domains.keys())
             random.shuffle(lst)
@@ -795,7 +797,7 @@ class MinConflictsSolver(Solver):
                         minvalues.append(value)
                 # Pick a random one from these values.
                 assignments[variable] = random.choice(minvalues)
-                drawCurrentShapeMinConflict(assignments[variable],variable,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+                drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
 
                 conflicted = True
             if not conflicted:
@@ -1505,6 +1507,34 @@ class SomeNotInSetConstraint(Constraint):
                     return False
         return True
 
+def drawCurrentAssignemnt(assignment, grid, pg, clock, screen):
+    for row in range(ROW):
+        for column in range(COLUMN):
+            if (row % 2 == 0 and column % 2 == 0) or (row % 2 == 1 and column % 2 == 1):
+                grid[row][column] = MAP_COLOR_TO_ID["white"]
+
+    for variable in assignment:
+        for coord in assignment[variable]:
+            x = coord[0]
+            y = coord[1]
+            grid[x][y] = MAP_COLOR_TO_ID[variable]
+
+    for row in range(ROW):
+        for column in range(COLUMN):
+            #color = white
+            cell = grid[row][column]
+
+            color = MAP_ID_TO_COLOR[cell]
+            ## print(color)
+
+            pg.draw.rect(screen,
+                            color,
+                            [(MARGIN + WIDTH) * column + MARGIN,
+                            (MARGIN + HEIGHT) * row + MARGIN,
+                            WIDTH,
+                            HEIGHT])
+    pg.display.flip()
+
 def drawCurrentShape(position,variable,grid,pg,clock,screen):
     #print("DISEGNO",variable)
     # print(len(grid))
@@ -1551,43 +1581,6 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
     pg.display.flip()
     # time.sleep(1)
 
-def drawCurrentShapeMinConflict(position,variable,grid,pg,clock,screen):
-    # # print("DISEGNO",shape)
-    # # print(len(grid))
-
-    if COLOR_ALREADY_DRAWN[variable]:
-        # # print("RIDISPONGO ",variable)
-        # remove shape from grid
-        id_color_to_remove = MAP_COLOR_TO_ID[variable]
-        for row in range(ROW):
-            for column in range(COLUMN):
-                if grid[row][column] == id_color_to_remove:
-                    grid[row][column] = MAP_COLOR_TO_ID["white"]
-    COLOR_ALREADY_DRAWN[variable] = True
-    pg.display.flip()
-    # # print("piazzo ",variable)
-
-    for coords in position:
-        x = coords[0]
-        y = coords[1]
-        grid[x][y] = MAP_COLOR_TO_ID[variable]
-
-    for row in range(ROW):
-        for column in range(COLUMN):
-            #color = white
-            cell = grid[row][column]
-
-            color = MAP_ID_TO_COLOR[cell]
-            ## print(color)
-
-            pg.draw.rect(screen,
-                            color,
-                            [(MARGIN + WIDTH) * column + MARGIN,
-                            (MARGIN + HEIGHT) * row + MARGIN,
-                            WIDTH,
-                            HEIGHT])
-    pg.display.flip()
-    #time.sleep(0.5)
 
 if __name__ == "__main__":
     import doctest
