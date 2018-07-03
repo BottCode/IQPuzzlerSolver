@@ -52,6 +52,7 @@ import random
 import copy
 import time
 from .compat import xrange
+from ConnectedComponent.CC import *
 
 __all__ = ["Problem", "Variable", "Domain", "Unassigned",
            "Solver", "BacktrackingSolver", "RecursiveBacktrackingSolver",
@@ -538,7 +539,9 @@ class BacktrackingSolver(Solver):
                     for domain in pushdomains:
                         domain.popState()
 
+
             while True:
+
                 # We have a variable. Do we have any values left?
                 if not values:
                     # No. Go back to last variable, if there's one.
@@ -548,6 +551,7 @@ class BacktrackingSolver(Solver):
                         if pushdomains:
                             for domain in pushdomains:
                                 domain.popState()
+
                         if values:
                             break
                         del assignments[variable]
@@ -562,7 +566,7 @@ class BacktrackingSolver(Solver):
                         domain.pushState()
 
                 for constraint, variables in vconstraints[variable]:
-                    if not constraint(variables, domains, assignments,pushdomains):
+                    if not constraint(variables, domains, assignments, pushdomains) or (0 < minCC(assignments.values()) <= 2):
                         # Value is not good.
                         break
                 else:

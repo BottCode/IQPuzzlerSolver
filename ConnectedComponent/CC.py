@@ -11,9 +11,10 @@ def DFSVisited(grid,u,visited,color):
     return visited
 
 
-def minCC(shape_position):
+def minCC(shape_positions):
     grid = Grid(11,9)
-    grid.deleteShapePosition(shape_position)
+    for shape in shape_positions:
+        grid.deleteShapePosition(shape)
     color = dict()
     for i in grid.adj_list.keys():
         color[i] = "white"
