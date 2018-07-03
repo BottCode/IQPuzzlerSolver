@@ -14,13 +14,9 @@ min_cc_choice = int(input("Would you a like to use the \"Connected Components\" 
 
 fixed_variables, shape_array = getConfig(difficulty,path)
 
-startingDraw(fixed_variables, shape_array, solution_choice, min_cc_choice)
+startingDraw(fixed_variables, shape_array, solution_choice, min_cc_choice, difficulty)
 
-'''
-if solution_choice == 1:
-    solution = DFSSolver(shape_array)
-else:
-    solution = CSPSolver(shape_array,solution_choice) '''
+
 
 #startingDraw(fixed_variables, solution)
 

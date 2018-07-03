@@ -79,14 +79,14 @@ MARGIN = 5
 # array is simply a list of lists.
 # draw as black box some cells such that final grid contains only diagonal cells
 
-def drawCurrentShape(shape):
+def drawCurrentShape(shape): 
     for coords in shape[0]:
         x = coords[0]
         y = coords[1]
         grid[x][y] = map_color_to_id[shape[1]]
 
 
-def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice):
+def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, difficulty):
     
     if min_cc_choice == 0:
         min_cc_choice = False
@@ -126,8 +126,13 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice):
     WINDOW_SIZE = [((WIDTH+MARGIN)*COLUMN) + 5, ((HEIGHT+MARGIN) * ROW) + START_BUTTON_HEIGHT]
     screen = PG.display.set_mode(WINDOW_SIZE)
 
+
     # Set title of screen
-    PG.display.set_caption("Array Backed Grid")
+    text_algorithm = {1: "DFS", 2: "BT", 3: "RBT", 4: "MCBT"}
+    is_with_cc = ""
+    if min_cc_choice:
+        is_with_cc = "with CC check"
+    PG.display.set_caption("Level "+str(difficulty)+" with "+text_algorithm[solution_choice]+" "+is_with_cc)
 
     # Loop until the user clicks the close button.
     done = False
