@@ -23,8 +23,9 @@ def buildShapes(shapes_path, grid,fixed_variables):
                 codes_array.append(code_lst)
             i = i + number_of_code
             color = words[i+1]
+            dimension = int(words[i+2])
             domain = generateDomain(grid, codes_array)
-            shape_array.append(Shape(codes_array,color,name, domain))
+            shape_array.append(Shape(codes_array,color,name, domain,dimension))
 
     return shape_array
 
@@ -102,5 +103,5 @@ def possibleDirection(directions, map_shape_to_direction, last_direction):
         notExploredDirection.remove((-last_direction[0],-last_direction[1]))
     return notExploredDirection
 
-def getShapes(self):
-    return self.shape_array
+def getMinimunDimension(shape_array):
+    return min([shape.dimension for shape in shape_array])

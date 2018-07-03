@@ -16,7 +16,7 @@ def DFS(assignment, shape_array, grid, PG, screen, min_cc_choice):
 
     next_var = shape_array[0]
     for value in next_var.domain:
-        if isConsistent(value, assignment,min_cc_choice): 
+        if isConsistent(value, assignment, shape_array, min_cc_choice):
             assignment.append((next_var.color, value))
             drawCurrentShape(value,next_var.color,grid,PG,None,screen)
             result = DFS(assignment, shape_array[1:], grid, PG, screen,min_cc_choice)
@@ -27,14 +27,17 @@ def DFS(assignment, shape_array, grid, PG, screen, min_cc_choice):
     return None
 
 
-def isConsistent(value, assignment,min_cc_choice):
+def isConsistent(value, assignment, shape_array, min_cc_choice):
     for a in assignment:
         for coord in value:
             #a is a tupla (color,position)
             if coord in a[1]:
                 return False
+
     if min_cc_choice:
+        min_dimension = min([var.dimension for var in shape_array])
+        
         partial_assignment = [x[1] for x in assignment] + [value]
-        if 0 < minCC(partial_assignment) <= 2:
+        if 0 < minCC(partial_assignment) < min_dimension:
             return False
     return True
