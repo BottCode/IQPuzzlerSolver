@@ -11,7 +11,6 @@
 import pygame as PG
 from CSPSolver.CSPSolver import CSPSolver
 from DFSSolver.DFSSolver import *
-from time import time
 
 
 grid = []
@@ -100,10 +99,10 @@ def startingDraw(fixed_shape, shape_array, solution_choice):
     # Set row 1, cell 5 to one. (Remember rows and
     # column numbers start at zero.)
 
-    # define start_button
-    START_BUTTON_WIDTH = ((WIDTH+MARGIN)*COLUMN) / 2
-    START_BUTTON_HEIGHT = 50
-    start_button = PG.Rect(0, (HEIGHT+MARGIN) * ROW + 5, START_BUTTON_WIDTH, START_BUTTON_HEIGHT)
+    # define button
+    BUTTON_WIDTH = ((WIDTH+MARGIN)*COLUMN) / 2
+    BUTTON_HEIGHT = 50
+    button = PG.Rect(0, (HEIGHT+MARGIN) * ROW + 5, BUTTON_WIDTH, BUTTON_HEIGHT)
     # draw fixed shape
     for shape in fixed_shape:
         #print(map_color_to_id[shape.color])
@@ -118,7 +117,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice):
     PG.init()
 
     # Set the HEIGHT and WIDTH of the screen
-    WINDOW_SIZE = [((WIDTH+MARGIN)*COLUMN) + 5, ((HEIGHT+MARGIN) * ROW) + START_BUTTON_HEIGHT]
+    WINDOW_SIZE = [((WIDTH+MARGIN)*COLUMN) + 5, ((HEIGHT+MARGIN) * ROW) + BUTTON_HEIGHT]
     screen = PG.display.set_mode(WINDOW_SIZE)
 
     # Set title of screen
@@ -131,7 +130,6 @@ def startingDraw(fixed_shape, shape_array, solution_choice):
     clock = PG.time.Clock()
     clock.tick(60)
     shape_drawned_count = 0
-    solving_time = 0
     # -------- Main Program Loop -----------
     while not done:
         for event in PG.event.get():  # User did something
@@ -139,13 +137,11 @@ def startingDraw(fixed_shape, shape_array, solution_choice):
                 done = True  # Flag that we are done so we exit this loop
             elif event.type == PG.MOUSEBUTTONDOWN:
                 # 1 is the left mouse button, 2 is middle, 3 is right.
-                if event.button == 1 and start_button.collidepoint(event.pos):
-                    t0 = time()
+                if event.button == 1 and button.collidepoint(event.pos):
                     if solution_choice == 1:
                         DFSSolver(shape_array,fixed_shape,grid,PG,screen)
                     else:
                         CSPSolver(shape_array,solution_choice,grid,PG,clock,screen)
-                    solving_time = time() - t0
 
                 pos = PG.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates
@@ -159,7 +155,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice):
         screen.fill(grey)
 
         # Draw the button
-        PG.draw.rect(screen, red, start_button)
+        PG.draw.rect(screen, red, button)
         # Draw the grid
         for row in range(ROW):
             for column in range(COLUMN):
@@ -175,13 +171,6 @@ def startingDraw(fixed_shape, shape_array, solution_choice):
                                 (MARGIN + HEIGHT) * row + MARGIN,
                                 WIDTH,
                                 HEIGHT])
-        
-         # display solving time
-        PG.font.init() 
-        myfont = PG.font.SysFont('Comic Sans MS', 30)
-        textsurface = myfont.render(str(solving_time)[0:6], False, (0, 0, 0))
-        screen.blit(textsurface,((START_BUTTON_WIDTH + (MARGIN*3),(HEIGHT+MARGIN) * ROW + (MARGIN*3))))
-
 
         # Go ahead and update the screen with what we've drawn.
         PG.display.flip()

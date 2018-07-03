@@ -590,11 +590,7 @@ class BacktrackingSolver(Solver):
         raise RuntimeError("Can't happen")
 
     def getSolution(self, domains, constraints, vconstraints,grid, pg,clock,screen):
-<<<<<<< HEAD
-        print("first backtracking")
-=======
         # # print("first backtracking")
->>>>>>> 0feccadf3552187f591c41b3792e6531a7581121
         self.GRID = grid
         self.PG = pg
         self.CLOCK = clock
@@ -1494,13 +1490,8 @@ class SomeNotInSetConstraint(Constraint):
         return True
 
 def drawCurrentShape(position,variable,grid,pg,clock,screen):
-<<<<<<< HEAD
     #print("DISEGNO",variable)
     # print(len(grid))
-=======
-    # print("DISEGNO",variable)
-    # # print(len(grid))
->>>>>>> 0feccadf3552187f591c41b3792e6531a7581121
 
     if COLOR_ALREADY_DRAWN[variable]:
         # # print("RIDISPONGO ",variable)
