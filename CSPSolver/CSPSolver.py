@@ -1,6 +1,6 @@
 from pythonConstraint import *
 from ConnectedComponent.CC import minCC, checkCoordConstraint
-
+from time import time
 
 def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen):
     problem = None
@@ -21,8 +21,6 @@ def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen):
         for j in range(i+1, len(shape_array)):
             problem.addConstraint(lambda a,b: checkCoordConstraint(a,b), [shape_array[i].color, shape_array[j].color])
 
-    '''sol = problem.getSolutions(grid,PG,clock,screen)
-    print(len(sol))
-    return sol[0]'''
-
-    return problem.getSolution(grid,PG,clock,screen)
+    t0 = time()
+    problem.getSolution(grid,PG,clock,screen)
+    return time() - t0

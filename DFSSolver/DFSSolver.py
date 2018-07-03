@@ -1,15 +1,16 @@
 #risolutore problema con DFS
 from ConnectedComponent.CC import *
 from pythonConstraint import drawCurrentShape
+from time import time
 
 def DFSSolver(shape_array, fixed_variable, grid, PG,screen):
     assignment = [(x.color,x.domain[0]) for x in fixed_variable]
     shape_array = list(set(shape_array)^set(fixed_variable))
     for s in shape_array:
         print(s.color)
-    solution = DFS(assignment, shape_array, grid, PG, screen)
-
-    print(solution)
+    t0 = time()
+    DFS(assignment, shape_array, grid, PG, screen)
+    return time() - t0
 
 def DFS(assignment, shape_array, grid, PG, screen):
     if not shape_array:
