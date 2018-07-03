@@ -1,6 +1,7 @@
 from pythonConstraint import *
 from ConnectedComponent.CC import minCC, checkCoordConstraint
 from time import time
+from Shape.buildShapes import getMinimunDimension
 
 def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen,min_cc_choice):
     problem = None
@@ -12,10 +13,11 @@ def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen,min_cc_choice):
     else:
         problem = Problem()
 
+    min_dimension = getMinimunDimension(shape_array)
     for shape in shape_array:
         #print(shape.name)
         problem.addVariable(shape.color, shape.domain)
-        problem.addConstraint(lambda v : minCC([v]) > 2, [shape.color])
+        problem.addConstraint(lambda v : minCC([v]) >= min_dimension, [shape.color])
 
     for i in range(len(shape_array)):
         for j in range(i+1, len(shape_array)):

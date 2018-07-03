@@ -1,11 +1,11 @@
-T 2 00 01 lightgreen
-L 1 0001 blue
-Z 1 010 brown
-SmallV 1 01 orange
-W 1 0101 purple
-BigZ 1 0100 green
-C 1 0112 yellow 
-Y 2 000 001 pink
-I 1 000 violet
-V 1 0011 cyan
-P 1 0012 red
+T 2 00 01 lightgreen 4
+L 1 0001 blue 5
+Z 1 010 brown 4
+SmallV 1 01 orange 3
+W 1 0101 purple 5
+BigZ 1 0100 green 5
+C 1 0112 yellow 5
+Y 2 000 001 pink 5
+I 1 000 violet 4
+V 1 0011 cyan 5
+P 1 0012 red 5

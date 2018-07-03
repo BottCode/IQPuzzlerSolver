@@ -571,8 +571,14 @@ class BacktrackingSolver(Solver):
                     for domain in pushdomains:
                         domain.pushState()
 
+                min_dimension = 3
+                if min_cc_choice:
+                    to_assign_len = [len(domains[var][0]) for var in domains.keys() if var not in assignments]
+                    if to_assign_len:
+                        min_dimension = min(to_assign_len)
+
                 for constraint, variables in vconstraints[variable]:
-                    if not constraint(variables, domains, assignments, pushdomains) or (min_cc_choice and (0 < minCC(assignments.values()) <= 2)):
+                    if not constraint(variables, domains, assignments, pushdomains) or (min_cc_choice and (0 < minCC(assignments.values()) < min_dimension)):
                         # Value is not good.
                         break
                 else:
@@ -672,13 +678,23 @@ class RecursiveBacktrackingSolver(Solver):
         else:
             pushdomains = None
 
+        min_dimension = 3
+        if min_cc_choice:
+            to_assign_len = [len(domains[var][0]) for var in domains.keys() if var not in assignments]
+            if to_assign_len:
+                min_dimension = min(to_assign_len)
+
+
         for value in domains[variable]:
             assignments[variable] = value
             if pushdomains:
                 for domain in pushdomains:
                     domain.pushState()
+
+
+
             for constraint, variables in vconstraints[variable] :
-                if not constraint(variables, domains, assignments, pushdomains)  or (min_cc_choice and (0 < minCC(assignments.values()) <= 2)):
+                if not constraint(variables, domains, assignments, pushdomains)  or (min_cc_choice and (0 < minCC(assignments.values()) < min_dimension)):
                     # Value is not good.
                     break
             else:
