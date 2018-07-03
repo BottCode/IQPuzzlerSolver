@@ -271,7 +271,7 @@ class Problem(object):
         self._constraints.append((constraint, variables))
 
     def getSolution(self,grid,pg,clock,screen):
-        # print("gg",grid)
+        # # print("gg",grid)
         """
         Find and return a solution to the problem
         Example:
@@ -577,7 +577,7 @@ class BacktrackingSolver(Solver):
                     for domain in pushdomains:
                         domain.popState()
 
-                # print(variable,"->",assignments[variable])
+                # # print(variable,"->",assignments[variable])
 
             # Push state before looking for next variable.
             queue.append((variable, values, pushdomains))
@@ -585,7 +585,7 @@ class BacktrackingSolver(Solver):
         raise RuntimeError("Can't happen")
 
     def getSolution(self, domains, constraints, vconstraints,grid, pg,clock,screen):
-        # print("first backtracking")
+        # # print("first backtracking")
         self.GRID = grid
         self.PG = pg
         self.CLOCK = clock
@@ -1481,11 +1481,11 @@ class SomeNotInSetConstraint(Constraint):
         return True
 
 def drawCurrentShape(position,variable,grid,pg,clock,screen):
-    print("DISEGNO",variable)
-    # print(len(grid))
+    # print("DISEGNO",variable)
+    # # print(len(grid))
 
     if COLOR_ALREADY_DRAWN[variable]:
-        # print("RIDISPONGO ",variable)
+        # # print("RIDISPONGO ",variable)
         # remove shape from grid
         id_color_to_remove = MAP_COLOR_TO_ID[variable]
         for row in range(ROW):
@@ -1494,13 +1494,13 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
                     grid[row][column] = MAP_COLOR_TO_ID["white"]
     COLOR_ALREADY_DRAWN[variable] = True
     pg.display.flip()
-    # print("piazzo ",variable)
+    # # print("piazzo ",variable)
     for coords in position:
         x = coords[0]
         y = coords[1]
         if MAP_ID_TO_COLOR[grid[x][y]] != "white":
             id_color_to_remove = grid[x][y]
-            #print(variable,"sovrapposto a",MAP_ID_TO_COLOR[id_color_to_remove])
+            ## print(variable,"sovrapposto a",MAP_ID_TO_COLOR[id_color_to_remove])
             for row in range(ROW):
                 for column in range(COLUMN):
                     if grid[row][column] == id_color_to_remove:
@@ -1515,7 +1515,7 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
             cell = grid[row][column]
 
             color = MAP_ID_TO_COLOR[cell]
-            #print(color)
+            ## print(color)
 
             pg.draw.rect(screen,
                             color,
@@ -1527,11 +1527,11 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
     # time.sleep(1)
 
 def drawCurrentShapeMinConflict(position,variable,grid,pg,clock,screen):
-    # print("DISEGNO",shape)
-    # print(len(grid))
+    # # print("DISEGNO",shape)
+    # # print(len(grid))
 
     if COLOR_ALREADY_DRAWN[variable]:
-        # print("RIDISPONGO ",variable)
+        # # print("RIDISPONGO ",variable)
         # remove shape from grid
         id_color_to_remove = MAP_COLOR_TO_ID[variable]
         for row in range(ROW):
@@ -1540,7 +1540,7 @@ def drawCurrentShapeMinConflict(position,variable,grid,pg,clock,screen):
                     grid[row][column] = MAP_COLOR_TO_ID["white"]
     COLOR_ALREADY_DRAWN[variable] = True
     pg.display.flip()
-    # print("piazzo ",variable)
+    # # print("piazzo ",variable)
 
     for coords in position:
         x = coords[0]
@@ -1553,7 +1553,7 @@ def drawCurrentShapeMinConflict(position,variable,grid,pg,clock,screen):
             cell = grid[row][column]
 
             color = MAP_ID_TO_COLOR[cell]
-            #print(color)
+            ## print(color)
 
             pg.draw.rect(screen,
                             color,
