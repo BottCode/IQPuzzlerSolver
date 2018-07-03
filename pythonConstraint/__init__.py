@@ -76,6 +76,8 @@ red = (205,0,0)
 grey = (193,205,205)
 cyan = (0,205,205)
 blue = (16,78,139)
+orange = (255,140,0)
+
 
 MAP_COLOR_TO_ID = {
     "black": 1,
@@ -89,7 +91,8 @@ MAP_COLOR_TO_ID = {
     "violet": 9,
     "cyan": 10,
     "red": 11,
-    "blue": 12
+    "blue": 12,
+    "orange": 13
 }
 
 MAP_ID_TO_COLOR = {
@@ -105,7 +108,8 @@ MAP_ID_TO_COLOR = {
     9: violet,
     10: cyan,
     11: red,
-    12: blue
+    12: blue,
+    13: orange
 }
 
 COLOR_ALREADY_DRAWN = {
@@ -120,7 +124,8 @@ COLOR_ALREADY_DRAWN = {
     "violet": False,
     "cyan": False,
     "red": False,
-    "blue": False
+    "blue": False,
+    "orange": False
 }
 
 # This sets the WIDTH and HEIGHT of each grid location
@@ -1480,7 +1485,7 @@ class SomeNotInSetConstraint(Constraint):
         return True
 
 def drawCurrentShape(position,variable,grid,pg,clock,screen):
-    # print("DISEGNO",shape)
+    print("DISEGNO",variable)
     # print(len(grid))
 
     if COLOR_ALREADY_DRAWN[variable]:
@@ -1523,7 +1528,7 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
                             WIDTH,
                             HEIGHT])
     pg.display.flip()
-    #time.sleep(1)
+    # time.sleep(1)
 
 def drawCurrentShapeMinConflict(position,variable,grid,pg,clock,screen):
     # print("DISEGNO",shape)
@@ -1561,7 +1566,7 @@ def drawCurrentShapeMinConflict(position,variable,grid,pg,clock,screen):
                             WIDTH,
                             HEIGHT])
     pg.display.flip()
-    #time.sleep(1)
+    #time.sleep(0.5)
 
 if __name__ == "__main__":
     import doctest

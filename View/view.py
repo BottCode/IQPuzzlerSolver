@@ -29,6 +29,7 @@ red = (205,0,0)
 grey = (193,205,205)
 cyan = (0,205,205)
 blue = (16,78,139)
+orange = (255,140,0)
 
 map_color_to_id = {
     "black": 1,
@@ -42,7 +43,8 @@ map_color_to_id = {
     "violet": 9,
     "cyan": 10,
     "red": 11,
-    "blue": 12
+    "blue": 12,
+    "orange": 13
 }
 
 map_id_to_color = {
@@ -58,7 +60,8 @@ map_id_to_color = {
     9: violet,
     10: cyan,
     11: red,
-    12: blue
+    12: blue,
+    13: orange
 }
 
 

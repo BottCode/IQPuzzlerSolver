@@ -1,7 +1,7 @@
 T 2 00 01 lightgreen
 L 1 0001 blue
 Z 1 010 brown
-SmallV 1 01 white
+SmallV 1 01 orange
 W 1 0101 purple
 BigZ 1 0100 green
 C 1 0112 yellow 
