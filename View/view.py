@@ -12,6 +12,7 @@ import pygame as PG
 from CSPSolver.CSPSolver import CSPSolver
 from DFSSolver.DFSSolver import *
 from time import time
+import sys
 
 
 grid = []
@@ -71,22 +72,35 @@ WIDTH = 40
 HEIGHT = 40
 COLUMN = 9
 ROW = 11
-
+N_TEST = 4
+PATH = './testResult.txt'
 # This sets the margin between each cell
 MARGIN = 5
 
-# Create a 2 dimensional array. A two dimensional
-# array is simply a list of lists.
-# draw as black box some cells such that final grid contains only diagonal cells
+def writeReport(total_solving_time,difficulty,solution_choice,min_cc_choice):
+    report = "\nLevel " + str(difficulty) + ", solved with"
+    if solution_choice == 1:
+        report += " DFS "
+    elif solution_choice == 3:
+        report += " RecBT "
+    elif solution_choice == 4:
+        report += " MinConfl "
+    else:
+        report += " BT "
+    
+    if min_cc_choice:
+        report += "with CC check"
+    
+    report += " solved in: " + str(total_solving_time)
+    
+    with open(PATH,"a") as report_file:
+        report_file.write(report)
 
-def drawCurrentShape(shape): 
-    for coords in shape[0]:
-        x = coords[0]
-        y = coords[1]
-        grid[x][y] = map_color_to_id[shape[1]]
+    
 
 
-def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, difficulty):
+
+def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, difficulty, is_test_mode):
     
     if min_cc_choice == 0:
         min_cc_choice = False
@@ -142,20 +156,40 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
     clock.tick(60)
     shape_drawned_count = 0
     solving_time = 0
+    total_solving_time = 0
+    text_is_test_mode = ""
     # -------- Main Program Loop -----------
+    # Set the screen background
+    screen.fill(grey)
+    if is_test_mode:
+            test_mode_event = PG.event.Event(0,message="testing mode")
+            PG.event.post(test_mode_event)
+            text_is_test_mode = "AV:"
+
     while not done:
         for event in PG.event.get():  # User did something
             if event.type == PG.QUIT:  # If user clicked close
                 done = True  # Flag that we are done so we exit this loop
-            elif event.type == PG.MOUSEBUTTONDOWN:
+            elif event.type == PG.MOUSEBUTTONDOWN or (hasattr(event,'message') and event.message == 'testing mode'):
                 # 1 is the left mouse button, 2 is middle, 3 is right.
-                if event.button == 1 and start_button.collidepoint(event.pos):
-
-                    if solution_choice == 1:
-                        solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
+                if is_test_mode or (event.button == 1 and start_button.collidepoint(event.pos)):
+                    if is_test_mode:
+                        for i in range(N_TEST):
+                            if solution_choice == 1:
+                                solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
+                            else:
+                                solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
+                            total_solving_time += solving_time
+                        total_solving_time = total_solving_time / N_TEST
+                        writeReport(total_solving_time,difficulty,solution_choice,min_cc_choice)
+                        sys.exit()
                     else:
-                        solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
-
+                        if solution_choice == 1:
+                                solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
+                        else:
+                            solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
+                        total_solving_time += solving_time
+                        
 
                 pos = PG.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates
@@ -165,8 +199,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
                 # grid[row][column] = 1
                 # print("Click ", pos, "Grid coordinates: ", row, column)
 
-        # Set the screen background
-        screen.fill(grey)
+        
 
         # Draw the button
         PG.draw.rect(screen, red, start_button)
@@ -189,7 +222,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
         # display solving time
         PG.font.init()
         myfont = PG.font.SysFont('Comic Sans MS', 30)
-        textsurface = myfont.render(str(solving_time)[0:6], False, (0, 0, 0))
+        textsurface = myfont.render(text_is_test_mode + str(total_solving_time)[0:6], False, (0, 0, 0))
         screen.blit(textsurface,((START_BUTTON_WIDTH + (MARGIN*3),(HEIGHT+MARGIN) * ROW + (MARGIN*3))))
 
 
