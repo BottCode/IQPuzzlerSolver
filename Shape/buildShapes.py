@@ -65,7 +65,7 @@ def generateDomain(grid, codes_array):
         if x not in toDelete:
             final_domain.append(dom[x])
 
-    print("FINE", len(final_domain))
+    # print("FINE", len(final_domain))
     return final_domain
 
 def findPossibleDomain(grid, map_shape_to_direction, codes_array):

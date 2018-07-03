@@ -2,7 +2,7 @@ from pythonConstraint import *
 from ConnectedComponent.CC import minCC, checkCoordConstraint
 from time import time
 
-def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen):
+def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen,min_cc_choice):
     problem = None
 
     if csp_type_choice == 3:
@@ -22,5 +22,5 @@ def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen):
             problem.addConstraint(lambda a,b: checkCoordConstraint(a,b), [shape_array[i].color, shape_array[j].color])
 
     t0 = time()
-    problem.getSolution(grid,PG,clock,screen)
+    problem.getSolution(grid,PG,clock,screen,min_cc_choice)
     return time() - t0

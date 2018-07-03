@@ -86,8 +86,13 @@ def drawCurrentShape(shape):
         grid[x][y] = map_color_to_id[shape[1]]
 
 
-def startingDraw(fixed_shape, shape_array, solution_choice):
-
+def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice):
+    
+    if min_cc_choice == 0:
+        min_cc_choice = False
+    else:
+        min_cc_choice = True
+    
     for row in range(ROW):
         # Add an empty array that will hold each cell
         # in this row
@@ -142,9 +147,9 @@ def startingDraw(fixed_shape, shape_array, solution_choice):
                 if event.button == 1 and start_button.collidepoint(event.pos):
 
                     if solution_choice == 1:
-                        solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen)
+                        solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
                     else:
-                        solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen)
+                        solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
 
 
                 pos = PG.mouse.get_pos()
