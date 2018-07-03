@@ -1,5 +1,5 @@
 #risolutore problema con DFS
-
+from ConnectedComponent.CC import *
 from pythonConstraint import drawCurrentShape
 
 def DFSSolver(shape_array, fixed_variable, grid, PG,screen):
@@ -34,4 +34,7 @@ def isConsistent(value, assignment):
             #a is a tupla (color,position)
             if coord in a[1]:
                 return False
+    '''partial_assignment = [x[1] for x in assignment] + [value]
+    if 0 < minCC(partial_assignment) <= 2:
+        return False'''
     return True

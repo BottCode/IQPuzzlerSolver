@@ -21,6 +21,8 @@ def CSPSolver(shape_array, csp_type_choice,grid, PG,clock,screen):
         for j in range(i+1, len(shape_array)):
             problem.addConstraint(lambda a,b: checkCoordConstraint(a,b), [shape_array[i].color, shape_array[j].color])
 
-    solution = problem.getSolution(grid,PG,clock,screen)
-    print("SOLUZIONE ",solution)
-    return solution
+    '''sol = problem.getSolutions(grid,PG,clock,screen)
+    print(len(sol))
+    return sol[0]'''
+
+    return problem.getSolution(grid,PG,clock,screen)

@@ -25,6 +25,7 @@ class Grid:
             for key in self.adj_list:
                 if coord in self.adj_list[key]:
                     self.adj_list[key].remove(coord)
+
             del self.adj_list[coord]
             self.coordinates.remove(coord)
 

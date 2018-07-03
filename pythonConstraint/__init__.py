@@ -48,6 +48,7 @@ from __future__ import absolute_import, division, print_function
 from .version import (__author__, __copyright__, __credits__, __license__,  # noqa
                       __version__, __email__, __status__, __url__)  # noqa
 
+import math
 import random
 import copy
 import time
@@ -291,7 +292,7 @@ class Problem(object):
             return None
         return self._solver.getSolution(domains, constraints, vconstraints,grid,pg,clock,screen)
 
-    def getSolutions(self):
+    def getSolutions(self,grid,pg,clock,screen):
         """
         Find and return all solutions to the problem
         Example:
@@ -307,7 +308,7 @@ class Problem(object):
         domains, constraints, vconstraints = self._getArgs()
         if not domains:
             return []
-        return self._solver.getSolutions(domains, constraints, vconstraints)
+        return self._solver.getSolutions(domains, constraints, vconstraints,grid,pg,clock,screen)
 
     def getSolutionIter(self):
         """
@@ -589,7 +590,7 @@ class BacktrackingSolver(Solver):
         raise RuntimeError("Can't happen")
 
     def getSolution(self, domains, constraints, vconstraints,grid, pg,clock,screen):
-        # print("first backtracking")
+        print("first backtracking")
         self.GRID = grid
         self.PG = pg
         self.CLOCK = clock
@@ -600,8 +601,13 @@ class BacktrackingSolver(Solver):
         except StopIteration:
             return None
 
-    def getSolutions(self, domains, constraints, vconstraints):
-        return list(self.getSolutionIter(domains, constraints, vconstraints))
+    def getSolutions(self, domains, constraints, vconstraints, grid, pg,clock,screen):
+        print("dfsdfdfsdfsdf")
+        self.GRID = grid
+        self.PG = pg
+        self.CLOCK = clock
+        self.SCREEN = screen
+        return list(self.getSolutionIter(domains, constraints, vconstraints, grid,clock,screen))
 
 
 class RecursiveBacktrackingSolver(Solver):
@@ -671,9 +677,8 @@ class RecursiveBacktrackingSolver(Solver):
             if pushdomains:
                 for domain in pushdomains:
                     domain.pushState()
-            for constraint, variables in vconstraints[variable]:
-                if not constraint(variables, domains, assignments,
-                                  pushdomains):
+            for constraint, variables in vconstraints[variable] :
+                if not constraint(variables, domains, assignments, pushdomains)  or (0 < minCC(assignments.values()) <= 2):
                     # Value is not good.
                     break
             else:
@@ -1485,7 +1490,7 @@ class SomeNotInSetConstraint(Constraint):
         return True
 
 def drawCurrentShape(position,variable,grid,pg,clock,screen):
-    print("DISEGNO",variable)
+    #print("DISEGNO",variable)
     # print(len(grid))
 
     if COLOR_ALREADY_DRAWN[variable]:
