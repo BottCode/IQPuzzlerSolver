@@ -1,165 +1,193 @@
 
-Level 0, solved with DFS  solved in: 0.02001875638961792
-Level 0, solved with DFS  solved in: 0.048646628856658936
-Level 0, solved with DFS  solved in: 0.05165231227874756
-Level 0, solved with DFS  solved in: 0.019774675369262695
-Level 0, solved with DFS  solved in: 0.005515038967132568
-Level 0, solved with DFS  solved in: 0.049485206604003906
-Level 0, solved with DFS with CC check solved in: 0.012764334678649902
-Level 0, solved with DFS with CC check solved in: 0.012423992156982422
-Level 0, solved with DFS with CC check solved in: 0.020116865634918213
-Level 0, solved with DFS with CC check solved in: 0.023339390754699707
-Level 0, solved with DFS with CC check solved in: 0.01722651720046997
-Level 0, solved with DFS with CC check solved in: 0.023533225059509277
-Level 0, solved with BT  solved in: 0.03396254777908325
-Level 0, solved with BT  solved in: 0.0378870964050293
-Level 0, solved with BT  solved in: 0.02654367685317993
-Level 0, solved with BT  solved in: 0.026494324207305908
-Level 0, solved with BT  solved in: 0.029707133769989014
-Level 0, solved with BT  solved in: 0.030931293964385986
-Level 0, solved with BT with CC check solved in: 0.06416630744934082
-Level 0, solved with BT with CC check solved in: 0.06114464998245239
-Level 0, solved with BT with CC check solved in: 0.06530219316482544
-Level 0, solved with BT with CC check solved in: 0.061440885066986084
-Level 0, solved with BT with CC check solved in: 0.06471049785614014
-Level 0, solved with BT with CC check solved in: 0.061993181705474854
-Level 0, solved with RecBT  solved in: 0.02427905797958374
-Level 0, solved with RecBT  solved in: 0.03390383720397949
-Level 0, solved with RecBT  solved in: 0.025475025177001953
-Level 0, solved with RecBT  solved in: 0.02557891607284546
-Level 0, solved with RecBT  solved in: 0.025892674922943115
-Level 0, solved with RecBT  solved in: 0.02660423517227173
-Level 0, solved with RecBT with CC check solved in: 0.062345921993255615
-Level 0, solved with RecBT with CC check solved in: 0.06270235776901245
-Level 0, solved with RecBT with CC check solved in: 0.06944870948791504
-Level 0, solved with RecBT with CC check solved in: 0.06106632947921753
-Level 0, solved with RecBT with CC check solved in: 0.06924140453338623
-Level 0, solved with RecBT with CC check solved in: 0.06416696310043335
-Level 1, solved with DFS  solved in: 0.11280131340026855
-Level 1, solved with DFS  solved in: 0.06590652465820312
-Level 1, solved with DFS  solved in: 0.10888862609863281
-Level 1, solved with DFS  solved in: 0.09420239925384521
-Level 1, solved with DFS  solved in: 0.06002974510192871
-Level 1, solved with DFS  solved in: 0.05797070264816284
-Level 1, solved with DFS with CC check solved in: 0.038563668727874756
-Level 1, solved with DFS with CC check solved in: 0.014628946781158447
-Level 1, solved with DFS with CC check solved in: 0.012052536010742188
-Level 1, solved with DFS with CC check solved in: 0.03647768497467041
-Level 1, solved with DFS with CC check solved in: 0.019811570644378662
-Level 1, solved with DFS with CC check solved in: 0.03548711538314819
-Level 1, solved with BT  solved in: 0.04025763273239136
-Level 1, solved with BT  solved in: 0.03646665811538696
-Level 1, solved with BT  solved in: 0.03831350803375244
-Level 1, solved with BT  solved in: 0.035913705825805664
-Level 1, solved with BT  solved in: 0.03557854890823364
-Level 1, solved with BT  solved in: 0.037644267082214355
-Level 1, solved with BT with CC check solved in: 0.08493798971176147
-Level 1, solved with BT with CC check solved in: 0.0918155312538147
-Level 1, solved with BT with CC check solved in: 0.08662271499633789
-Level 1, solved with BT with CC check solved in: 0.08790922164916992
-Level 1, solved with BT with CC check solved in: 0.09531491994857788
-Level 1, solved with BT with CC check solved in: 0.07454657554626465
-Level 1, solved with RecBT  solved in: 0.03890848159790039
-Level 1, solved with RecBT  solved in: 0.038809776306152344
-Level 1, solved with RecBT  solved in: 0.05001181364059448
-Level 1, solved with RecBT  solved in: 0.044277191162109375
-Level 1, solved with RecBT  solved in: 0.04123169183731079
-Level 1, solved with RecBT  solved in: 0.040244996547698975
-Level 1, solved with RecBT with CC check solved in: 0.09001749753952026
-Level 1, solved with RecBT with CC check solved in: 0.098000168800354
-Level 1, solved with RecBT with CC check solved in: 0.09044152498245239
-Level 1, solved with RecBT with CC check solved in: 0.08196777105331421
-Level 1, solved with RecBT with CC check solved in: 0.08433490991592407
-Level 1, solved with RecBT with CC check solved in: 0.08062279224395752
-Level 2, solved with DFS  solved in: 15.180523812770844
-Level 2, solved with DFS  solved in: 2.5512943863868713
-Level 2, solved with DFS  solved in: 5.798908770084381
-Level 2, solved with DFS  solved in: 15.15050208568573
-Level 2, solved with DFS  solved in: 1.8135698437690735
-Level 2, solved with DFS  solved in: 2.4841268658638
-Level 2, solved with DFS with CC check solved in: 1.1713468432426453
-Level 2, solved with DFS with CC check solved in: 1.184813380241394
-Level 2, solved with DFS with CC check solved in: 0.2877756953239441
-Level 2, solved with DFS with CC check solved in: 1.241358458995819
-Level 2, solved with DFS with CC check solved in: 1.1954364776611328
-Level 2, solved with DFS with CC check solved in: 1.1089531779289246
-Level 2, solved with BT  solved in: 0.09299284219741821
-Level 2, solved with BT  solved in: 0.09747344255447388
-Level 2, solved with BT  solved in: 0.09619945287704468
-Level 2, solved with BT  solved in: 0.09470826387405396
-Level 2, solved with BT  solved in: 0.1022682785987854
-Level 2, solved with BT  solved in: 0.09953612089157104
-Level 2, solved with BT with CC check solved in: 0.16887199878692627
-Level 2, solved with BT with CC check solved in: 0.1773635745048523
-Level 2, solved with BT with CC check solved in: 0.19111990928649902
-Level 2, solved with BT with CC check solved in: 0.17990994453430176
-Level 2, solved with BT with CC check solved in: 0.16955018043518066
-Level 2, solved with BT with CC check solved in: 0.178264319896698
-Level 2, solved with RecBT  solved in: 0.0821714997291565
-Level 2, solved with RecBT  solved in: 0.083432137966156
-Level 2, solved with RecBT  solved in: 0.08250373601913452
-Level 2, solved with RecBT  solved in: 0.07972931861877441
-Level 2, solved with RecBT  solved in: 0.07841545343399048
-Level 2, solved with RecBT  solved in: 0.07492560148239136
-Level 2, solved with RecBT with CC check solved in: 0.13501793146133423
-Level 2, solved with RecBT with CC check solved in: 0.14898717403411865
-Level 2, solved with RecBT with CC check solved in: 0.1645066738128662
-Level 2, solved with RecBT with CC check solved in: 0.14631330966949463
-Level 2, solved with RecBT with CC check solved in: 0.16901695728302002
-Level 2, solved with RecBT with CC check solved in: 0.15576142072677612
-Level 3, solved with DFS with CC check solved in: 12.791454076766968
-Level 3, solved with DFS with CC check solved in: 6.483132362365723
-Level 3, solved with DFS with CC check solved in: 5.104373753070831
-Level 3, solved with DFS with CC check solved in: 6.510154962539673
-Level 3, solved with DFS with CC check solved in: 37.67945373058319
-Level 3, solved with DFS with CC check solved in: 46.70897829532623
-Level 3, solved with BT  solved in: 1.9911961555480957
-Level 3, solved with BT  solved in: 1.9604060649871826
-Level 3, solved with BT  solved in: 1.9625866413116455
-Level 3, solved with BT  solved in: 1.944386899471283
-Level 3, solved with BT  solved in: 1.944082260131836
-Level 3, solved with BT  solved in: 1.9842017889022827
-Level 3, solved with BT with CC check solved in: 1.5045922994613647
-Level 3, solved with BT with CC check solved in: 1.444263994693756
-Level 3, solved with BT with CC check solved in: 1.4602234363555908
-Level 3, solved with BT with CC check solved in: 1.5259326696395874
-Level 3, solved with BT with CC check solved in: 1.5107371807098389
-Level 3, solved with BT with CC check solved in: 1.4768961668014526
-Level 3, solved with RecBT  solved in: 1.042735517024994
-Level 3, solved with RecBT  solved in: 1.0303075313568115
-Level 3, solved with RecBT  solved in: 1.0383896827697754
-Level 3, solved with RecBT  solved in: 1.0336892008781433
-Level 3, solved with RecBT  solved in: 1.0281173586845398
-Level 3, solved with RecBT  solved in: 1.0137144327163696
-Level 3, solved with RecBT with CC check solved in: 0.4586479067802429
-Level 3, solved with RecBT with CC check solved in: 0.4729280471801758
-Level 3, solved with RecBT with CC check solved in: 0.4653858542442322
-Level 3, solved with RecBT with CC check solved in: 0.4724165201187134
-Level 3, solved with RecBT with CC check solved in: 0.4667242169380188
-Level 3, solved with RecBT with CC check solved in: 0.47404128313064575
-Level 4, solved with BT  solved in: 7.183597266674042
-Level 4, solved with BT  solved in: 7.21145099401474
-Level 4, solved with BT  solved in: 7.200101017951965
-Level 4, solved with BT  solved in: 7.061955571174622
-Level 4, solved with BT  solved in: 7.04973578453064
-Level 4, solved with BT  solved in: 7.026433348655701
-Level 4, solved with BT with CC check solved in: 1.4869526624679565
-Level 4, solved with BT with CC check solved in: 1.4502842426300049
-Level 4, solved with BT with CC check solved in: 1.4552861452102661
-Level 4, solved with BT with CC check solved in: 1.5507547855377197
-Level 4, solved with BT with CC check solved in: 1.4854626059532166
-Level 4, solved with BT with CC check solved in: 1.4520381093025208
-Level 4, solved with RecBT  solved in: 47.42294067144394
-Level 4, solved with RecBT  solved in: 48.818927228450775
-Level 4, solved with RecBT  solved in: 45.36108160018921
-Level 4, solved with RecBT  solved in: 42.02697366476059
-Level 4, solved with RecBT  solved in: 42.02719497680664
-Level 4, solved with RecBT  solved in: 41.98248636722565
-Level 4, solved with RecBT with CC check solved in: 18.640566647052765
-Level 4, solved with RecBT with CC check solved in: 18.988224864006042
-Level 4, solved with RecBT with CC check solved in: 18.43270468711853
-Level 4, solved with RecBT with CC check solved in: 18.813813090324402
-Level 4, solved with RecBT with CC check solved in: 18.23488438129425
-Level 4, solved with RecBT with CC check solved in: 14.56477415561676
-Level 0, solved with DFS with CC check solved in: 0.012572288513183594
-Level 0, solved with DFS with CC check solved in: 0.008529186248779297
+Level 0, solved with DFS  solved in: 0.04007673263549805
+Level 0, solved with DFS  solved in: 0.03483009338378906
+Level 0, solved with DFS  solved in: 0.014351844787597656
+Level 0, solved with DFS  solved in: 0.022309064865112305
+Level 0, solved with DFS  solved in: 0.11802291870117188
+Level 0, solved with DFS  solved in: 0.06200814247131348
+Level 0, solved with DFS with CC check solved in: 0.025775432586669922
+Level 0, solved with DFS with CC check solved in: 0.007939577102661133
+Level 0, solved with DFS with CC check solved in: 0.14692044258117676
+Level 0, solved with DFS with CC check solved in: 0.016136884689331055
+Level 0, solved with DFS with CC check solved in: 0.03350710868835449
+Level 0, solved with DFS with CC check solved in: 0.016777515411376953
+Level 0, solved with BT  solved in: 0.13175201416015625
+Level 0, solved with BT  solved in: 0.03840446472167969
+Level 0, solved with BT  solved in: 0.03462076187133789
+Level 0, solved with BT  solved in: 0.035396575927734375
+Level 0, solved with BT  solved in: 0.04525136947631836
+Level 0, solved with BT  solved in: 0.04271888732910156
+Level 0, solved with BT with CC check solved in: 0.05896282196044922
+Level 0, solved with BT with CC check solved in: 0.07642316818237305
+Level 0, solved with BT with CC check solved in: 0.061052560806274414
+Level 0, solved with BT with CC check solved in: 0.06675124168395996
+Level 0, solved with BT with CC check solved in: 0.08394956588745117
+Level 0, solved with BT with CC check solved in: 0.07435894012451172
+Level 0, solved with RecBT  solved in: 0.02099609375
+Level 0, solved with RecBT  solved in: 0.024810791015625
+Level 0, solved with RecBT  solved in: 0.017071962356567383
+Level 0, solved with RecBT  solved in: 0.02229166030883789
+Level 0, solved with RecBT  solved in: 0.016002655029296875
+Level 0, solved with RecBT  solved in: 0.02738213539123535
+Level 0, solved with RecBT with CC check solved in: 0.0681142807006836
+Level 0, solved with RecBT with CC check solved in: 0.06535863876342773
+Level 0, solved with RecBT with CC check solved in: 0.06687331199645996
+Level 0, solved with RecBT with CC check solved in: 0.05034494400024414
+Level 0, solved with RecBT with CC check solved in: 0.057984113693237305
+Level 0, solved with RecBT with CC check solved in: 0.06693077087402344
+Level 0, solved with MinConfl  solved in: 0.027265548706054688
+Level 0, solved with MinConfl  solved in: 0.013900041580200195
+Level 0, solved with MinConfl  solved in: 0.01343846321105957
+Level 0, solved with MinConfl  solved in: 0.025531291961669922
+Level 0, solved with MinConfl  solved in: 0.024184703826904297
+Level 0, solved with MinConfl  solved in: 0.019878387451171875
+Level 1, solved with DFS  solved in: 0.14054059982299805
+Level 1, solved with DFS  solved in: 0.11418986320495605
+Level 1, solved with DFS  solved in: 0.17164993286132812
+Level 1, solved with DFS  solved in: 0.2230086326599121
+Level 1, solved with DFS  solved in: 0.08555006980895996
+Level 1, solved with DFS  solved in: 0.1025850772857666
+Level 1, solved with DFS with CC check solved in: 0.04025745391845703
+Level 1, solved with DFS with CC check solved in: 0.047280073165893555
+Level 1, solved with DFS with CC check solved in: 0.01177668571472168
+Level 1, solved with DFS with CC check solved in: 0.030913829803466797
+Level 1, solved with DFS with CC check solved in: 0.011439800262451172
+Level 1, solved with DFS with CC check solved in: 0.012657403945922852
+Level 1, solved with BT  solved in: 0.02997732162475586
+Level 1, solved with BT  solved in: 0.024552106857299805
+Level 1, solved with BT  solved in: 0.03347349166870117
+Level 1, solved with BT  solved in: 0.04936337471008301
+Level 1, solved with BT  solved in: 0.028075218200683594
+Level 1, solved with BT  solved in: 0.031054973602294922
+Level 1, solved with BT with CC check solved in: 0.09578418731689453
+Level 1, solved with BT with CC check solved in: 0.06544661521911621
+Level 1, solved with BT with CC check solved in: 0.09796833992004395
+Level 1, solved with BT with CC check solved in: 0.09286069869995117
+Level 1, solved with BT with CC check solved in: 0.08243775367736816
+Level 1, solved with BT with CC check solved in: 0.06319785118103027
+Level 1, solved with RecBT  solved in: 0.030975341796875
+Level 1, solved with RecBT  solved in: 0.0274355411529541
+Level 1, solved with RecBT  solved in: 0.032787322998046875
+Level 1, solved with RecBT  solved in: 0.0364077091217041
+Level 1, solved with RecBT  solved in: 0.02948284149169922
+Level 1, solved with RecBT  solved in: 0.028369665145874023
+Level 1, solved with RecBT with CC check solved in: 0.07299327850341797
+Level 1, solved with RecBT with CC check solved in: 0.07421875
+Level 1, solved with RecBT with CC check solved in: 0.06485676765441895
+Level 1, solved with RecBT with CC check solved in: 0.07723736763000488
+Level 1, solved with RecBT with CC check solved in: 0.065643310546875
+Level 1, solved with RecBT with CC check solved in: 0.08944892883300781
+Level 1, solved with MinConfl  solved in: 0.0618746280670166
+Level 1, solved with MinConfl  solved in: 0.032343387603759766
+Level 1, solved with MinConfl  solved in: 0.025714635848999023
+Level 1, solved with MinConfl  solved in: 0.07726263999938965
+Level 1, solved with MinConfl  solved in: FAIL
+Level 1, solved with MinConfl  solved in: 0.024158954620361328
+Level 2, solved with DFS  solved in: 0.9235172271728516
+Level 2, solved with DFS  solved in: 1.4949924945831299
+Level 2, solved with DFS  solved in: 1.3455924987792969
+Level 2, solved with DFS  solved in: 0.45713067054748535
+Level 2, solved with DFS  solved in: 7.972754001617432
+Level 2, solved with DFS  solved in: 1.1113858222961426
+Level 2, solved with DFS with CC check solved in: 0.11040139198303223
+Level 2, solved with DFS with CC check solved in: 0.6149556636810303
+Level 2, solved with DFS with CC check solved in: 0.09905767440795898
+Level 2, solved with DFS with CC check solved in: 0.4420919418334961
+Level 2, solved with DFS with CC check solved in: 0.052516937255859375
+Level 2, solved with DFS with CC check solved in: 0.5438179969787598
+Level 2, solved with BT  solved in: 0.06995010375976562
+Level 2, solved with BT  solved in: 0.06391310691833496
+Level 2, solved with BT  solved in: 0.07855677604675293
+Level 2, solved with BT  solved in: 0.060053110122680664
+Level 2, solved with BT  solved in: 0.06814050674438477
+Level 2, solved with BT  solved in: 0.07450318336486816
+Level 2, solved with BT with CC check solved in: 0.12781453132629395
+Level 2, solved with BT with CC check solved in: 0.22461652755737305
+Level 2, solved with BT with CC check solved in: 0.12940239906311035
+Level 2, solved with BT with CC check solved in: 0.14780497550964355
+Level 2, solved with BT with CC check solved in: 0.13673067092895508
+Level 2, solved with BT with CC check solved in: 0.16025257110595703
+Level 2, solved with RecBT  solved in: 0.09754586219787598
+Level 2, solved with RecBT  solved in: 0.05831551551818848
+Level 2, solved with RecBT  solved in: 0.05101633071899414
+Level 2, solved with RecBT  solved in: 0.06151008605957031
+Level 2, solved with RecBT  solved in: 0.07638192176818848
+Level 2, solved with RecBT  solved in: 0.10979032516479492
+Level 2, solved with RecBT with CC check solved in: 0.11496186256408691
+Level 2, solved with RecBT with CC check solved in: 0.12808561325073242
+Level 2, solved with RecBT with CC check solved in: 0.10856437683105469
+Level 2, solved with RecBT with CC check solved in: 0.14572358131408691
+Level 2, solved with RecBT with CC check solved in: 0.1485583782196045
+Level 2, solved with RecBT with CC check solved in: 0.15156984329223633
+Level 2, solved with MinConfl  solved in: 0.04407954216003418
+Level 2, solved with MinConfl  solved in: 0.19568872451782227
+Level 2, solved with MinConfl  solved in: 0.12225651741027832
+Level 2, solved with MinConfl  solved in: 0.2872755527496338
+Level 2, solved with MinConfl  solved in: 0.10203242301940918
+Level 2, solved with MinConfl  solved in: 0.10880422592163086
+Level 3, solved with DFS with CC check solved in: 14.396318912506104
+Level 3, solved with DFS with CC check solved in: 14.450870752334595
+Level 3, solved with DFS with CC check solved in: 74.54188680648804
+Level 3, solved with DFS with CC check solved in: 14.696727275848389
+Level 3, solved with DFS with CC check solved in: 17.02810311317444
+Level 3, solved with DFS with CC check solved in: 14.927669048309326
+Level 3, solved with BT  solved in: 1.431858777999878
+Level 3, solved with BT  solved in: 1.1665098667144775
+Level 3, solved with BT  solved in: 1.2977490425109863
+Level 3, solved with BT  solved in: 1.4685349464416504
+Level 3, solved with BT  solved in: 1.192368984222412
+Level 3, solved with BT  solved in: 1.2074854373931885
+Level 3, solved with BT with CC check solved in: 1.7754464149475098
+Level 3, solved with BT with CC check solved in: 1.3262581825256348
+Level 3, solved with BT with CC check solved in: 1.3891379833221436
+Level 3, solved with BT with CC check solved in: 1.2906086444854736
+Level 3, solved with BT with CC check solved in: 1.2495110034942627
+Level 3, solved with BT with CC check solved in: 1.2538421154022217
+Level 3, solved with RecBT  solved in: 0.6623423099517822
+Level 3, solved with RecBT  solved in: 0.7704837322235107
+Level 3, solved with RecBT  solved in: 0.8259520530700684
+Level 3, solved with RecBT  solved in: 0.6838879585266113
+Level 3, solved with RecBT  solved in: 0.8068218231201172
+Level 3, solved with RecBT  solved in: 0.7850964069366455
+Level 3, solved with RecBT with CC check solved in: 0.48860955238342285
+Level 3, solved with RecBT with CC check solved in: 0.5808141231536865
+Level 3, solved with RecBT with CC check solved in: 0.4676508903503418
+Level 3, solved with RecBT with CC check solved in: 0.5368890762329102
+Level 3, solved with RecBT with CC check solved in: 0.4156968593597412
+Level 3, solved with RecBT with CC check solved in: 0.35495972633361816
+Level 3, solved with MinConfl  solved in: FAIL
+Level 3, solved with MinConfl  solved in: FAIL
+Level 3, solved with MinConfl  solved in: FAIL
+Level 3, solved with MinConfl  solved in: FAIL
+Level 3, solved with MinConfl  solved in: FAIL
+Level 3, solved with MinConfl  solved in: FAIL
+Level 4, solved with BT  solved in: 4.181128978729248
+Level 4, solved with BT  solved in: 4.440326452255249
+Level 4, solved with BT  solved in: 4.318382978439331
+Level 4, solved with BT  solved in: 4.382483005523682
+Level 4, solved with BT  solved in: 4.221513986587524
+Level 4, solved with BT  solved in: 4.513665199279785
+Level 4, solved with BT with CC check solved in: 1.372251272201538
+Level 4, solved with BT with CC check solved in: 1.1955034732818604
+Level 4, solved with BT with CC check solved in: 1.5180599689483643
+Level 4, solved with BT with CC check solved in: 1.2148313522338867
+Level 4, solved with BT with CC check solved in: 1.4637818336486816
+Level 4, solved with BT with CC check solved in: 1.1109557151794434
+Level 4, solved with RecBT  solved in: 23.720110416412354
+Level 4, solved with RecBT  solved in: 24.540160655975342
+Level 4, solved with RecBT  solved in: 23.883116245269775
+Level 4, solved with RecBT  solved in: 23.857978343963623
+Level 4, solved with RecBT  solved in: 24.246727228164673
+Level 4, solved with RecBT  solved in: 23.97981905937195
+Level 4, solved with RecBT with CC check solved in: 13.435713768005371
+Level 4, solved with RecBT with CC check solved in: 13.632670879364014
+Level 4, solved with RecBT with CC check solved in: 13.914701461791992
+Level 4, solved with RecBT with CC check solved in: 13.88262939453125
+Level 4, solved with RecBT with CC check solved in: 13.796525955200195
+Level 4, solved with RecBT with CC check solved in: 13.670159578323364
+Level 4, solved with MinConfl  solved in: FAIL
+Level 4, solved with MinConfl  solved in: FAIL
+Level 4, solved with MinConfl  solved in: FAIL
+Level 4, solved with MinConfl  solved in: FAIL
+Level 4, solved with MinConfl  solved in: FAIL
+Level 4, solved with MinConfl  solved in: 2.793123960494995

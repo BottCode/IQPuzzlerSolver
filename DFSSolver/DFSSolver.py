@@ -18,7 +18,7 @@ def DFS(assignment, shape_array, grid, PG, screen, min_cc_choice):
     for value in next_var.domain:
         if isConsistent(value, assignment, shape_array, min_cc_choice):
             assignment.append((next_var.color, value))
-            drawCurrentShape(value,next_var.color,grid,PG,None,screen)
+            drawCurrentShape(value,next_var.color,grid,PG,screen)
             result = DFS(assignment, shape_array[1:], grid, PG, screen,min_cc_choice)
             if result != None:
                 return result

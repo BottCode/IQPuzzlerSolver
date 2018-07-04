@@ -1,6 +1,6 @@
 #! /bin/sh
 
-> testResult.txt
+> Test/testResult.txt
 
 # Level 0, solving algorithm 1 (DFS), with NO Connected Components check
 python3 main.py 0 1 0 

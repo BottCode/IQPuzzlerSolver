@@ -6,7 +6,7 @@ def main():
     SHAPE_CODE_PATH = './shape_code.txt'
     difficulty, solution_choice, min_cc_choice, is_test_mode = 0, 0, 0, False
 
-    if len(sys.argv) == 3 + 1: # sys.argv[0] is file name
+    if len(sys.argv) in [2+1,3+1]: # sys.argv[0] is file name
         is_test_mode = True
         difficulty = int(sys.argv[1])
         solution_choice = int(sys.argv[2])

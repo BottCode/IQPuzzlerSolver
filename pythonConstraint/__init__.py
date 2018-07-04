@@ -155,7 +155,6 @@ class Problem(object):
         self._variables = {}
         self.GRID = []
         self.PG = None
-        self.clock = None
         self.SCREEN = None
 
     def reset(self):
@@ -272,7 +271,7 @@ class Problem(object):
                 raise ValueError(msg)
         self._constraints.append((constraint, variables))
 
-    def getSolution(self,grid,pg,clock,screen,min_cc_choice):
+    def getSolution(self,grid,pg,screen,min_cc_choice):
         # # print("gg",grid)
         """
         Find and return a solution to the problem
@@ -290,9 +289,9 @@ class Problem(object):
         domains, constraints, vconstraints = self._getArgs()
         if not domains:
             return None
-        return self._solver.getSolution(domains, constraints, vconstraints,grid,pg,clock,screen,min_cc_choice)
+        return self._solver.getSolution(domains, constraints, vconstraints,grid,pg,screen,min_cc_choice)
 
-    def getSolutions(self,grid,pg,clock,screen):
+    def getSolutions(self,grid,pg,screen):
         """
         Find and return all solutions to the problem
         Example:
@@ -308,7 +307,7 @@ class Problem(object):
         domains, constraints, vconstraints = self._getArgs()
         if not domains:
             return []
-        return self._solver.getSolutions(domains, constraints, vconstraints,grid,pg,clock,screen)
+        return self._solver.getSolutions(domains, constraints, vconstraints,grid,pg,screen)
 
     def getSolutionIter(self):
         """
@@ -512,7 +511,7 @@ class BacktrackingSolver(Solver):
         self.PG = None
         self.SCREEN = None
 
-    def getSolutionIter(self, domains, constraints, vconstraints,grid,clock,screen,min_cc_choice):
+    def getSolutionIter(self, domains, constraints, vconstraints,grid,screen,min_cc_choice):
         forwardcheck = self._forwardcheck
         assignments = {}
 
@@ -592,28 +591,26 @@ class BacktrackingSolver(Solver):
 
             # Push state before looking for next variable.
             queue.append((variable, values, pushdomains))
-            drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+            drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
         raise RuntimeError("Can't happen")
 
-    def getSolution(self, domains, constraints, vconstraints,grid, pg,clock,screen,min_cc_choice):
+    def getSolution(self, domains, constraints, vconstraints,grid, pg,screen,min_cc_choice):
         # # print("first backtracking")
         self.GRID = grid
         self.PG = pg
-        self.CLOCK = clock
         self.SCREEN = screen
-        iter = self.getSolutionIter(domains, constraints, vconstraints,grid,clock,screen,min_cc_choice)
+        iter = self.getSolutionIter(domains, constraints, vconstraints,grid,screen,min_cc_choice)
         try:
             return next(iter)
         except StopIteration:
             return None
 
-    def getSolutions(self, domains, constraints, vconstraints, grid, pg,clock,screen):
+    def getSolutions(self, domains, constraints, vconstraints, grid, pg,screen):
         print("dfsdfdfsdfsdf")
         self.GRID = grid
         self.PG = pg
-        self.CLOCK = clock
         self.SCREEN = screen
-        return list(self.getSolutionIter(domains, constraints, vconstraints, grid,clock,screen))
+        return list(self.getSolutionIter(domains, constraints, vconstraints, grid,screen))
 
 
 class RecursiveBacktrackingSolver(Solver):
@@ -651,10 +648,9 @@ class RecursiveBacktrackingSolver(Solver):
         self.GRID = []
         self.PG = None
         self.SCREEN = None
-        self.CLOCK = None
 
     def recursiveBacktracking(self, solutions, domains, vconstraints,
-                              assignments, single,grid,pg,clock,screen,min_cc_choice):
+                              assignments, single,grid,pg,screen,min_cc_choice):
 
         # Mix the Degree and Minimum Remaing Values (MRV) heuristics
         lst = [(-len(vconstraints[variable]),
@@ -699,9 +695,9 @@ class RecursiveBacktrackingSolver(Solver):
                     break
             else:
                 # Value is good. Recurse and get next variable.
-                drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+                drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
                 self.recursiveBacktracking(solutions, domains, vconstraints,
-                                           assignments, single,grid,pg,clock,screen,min_cc_choice)
+                                           assignments, single,grid,pg,screen,min_cc_choice)
                 if solutions and single:
                     return solutions
             if pushdomains:
@@ -710,12 +706,12 @@ class RecursiveBacktrackingSolver(Solver):
         del assignments[variable]
         return solutions
 
-    def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen,min_cc_choice):
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen,min_cc_choice):
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
 
-        solutions = self.recursiveBacktracking([], domains, vconstraints,{}, True,grid,pg,clock,screen,min_cc_choice)
+        solutions = self.recursiveBacktracking([], domains, vconstraints,{}, True,grid,pg,screen,min_cc_choice)
         return solutions and solutions[0] or None
 
     def getSolutions(self, domains, constraints, vconstraints):
@@ -758,7 +754,7 @@ class MinConflictsSolver(Solver):
         self.SCREEN = None
         self.CLOCK = None
 
-    def getSolution(self, domains, constraints, vconstraints,grid,pg,clock,screen, min_cc_choice):
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen, min_cc_choice):
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
@@ -767,7 +763,7 @@ class MinConflictsSolver(Solver):
         for variable in domains:
             assignments[variable] = random.choice(domains[variable])
 
-        drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+        drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
 
         for _ in xrange(self._steps):
             conflicted = False
@@ -797,7 +793,7 @@ class MinConflictsSolver(Solver):
                         minvalues.append(value)
                 # Pick a random one from these values.
                 assignments[variable] = random.choice(minvalues)
-                drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.CLOCK,self.SCREEN)
+                drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
 
                 conflicted = True
             if not conflicted:
@@ -1510,7 +1506,7 @@ class SomeNotInSetConstraint(Constraint):
 
 # this functions modified the grid-view with side-effects
 
-def drawCurrentAssignemnt(assignment, grid, pg, clock, screen):
+def drawCurrentAssignemnt(assignment, grid, pg,  screen):
     for row in range(ROW):
         for column in range(COLUMN):
             if (row % 2 == 0 and column % 2 == 0) or (row % 2 == 1 and column % 2 == 1):
@@ -1538,7 +1534,7 @@ def drawCurrentAssignemnt(assignment, grid, pg, clock, screen):
                             HEIGHT])
     pg.display.flip()
 
-def drawCurrentShape(position,variable,grid,pg,clock,screen):
+def drawCurrentShape(position,variable,grid,pg,screen):
     #print("DISEGNO",variable)
     # print(len(grid))
 

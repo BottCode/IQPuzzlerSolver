@@ -1,4 +1,4 @@
-PATH = "./testResult.txt" 
+PATH = "Test/testResult.txt" 
 
 def writeReport(total_solving_time,difficulty,solution_choice,min_cc_choice):
     report = "\nLevel " + str(difficulty) + ", solved with"

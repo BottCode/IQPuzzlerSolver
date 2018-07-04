@@ -158,15 +158,15 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
                         if solution_choice == 1:
                             solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
                         else:
-                            solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
-                        
+                            solving_time = CSPSolver(shape_array,solution_choice,grid,PG,screen,min_cc_choice)
+                          
                         writeReport(solving_time,difficulty,solution_choice,min_cc_choice)
                         sys.exit()
                     else:
                         if solution_choice == 1:
                             solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
                         else:
-                            solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
+                            solving_time = CSPSolver(shape_array,solution_choice,grid,PG,screen,min_cc_choice)
                         
                 pos = PG.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates
