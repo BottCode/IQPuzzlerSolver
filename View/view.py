@@ -165,7 +165,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
             test_mode_event = PG.event.Event(0,message="testing mode")
             PG.event.post(test_mode_event)
             text_is_test_mode = "AV:"
-
+    i = 0
     while not done:
         for event in PG.event.get():  # User did something
             if event.type == PG.QUIT:  # If user clicked close
@@ -179,8 +179,10 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
                                 solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
                             else:
                                 solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
-                            total_solving_time += solving_time
-                        total_solving_time = total_solving_time / N_TEST
+                            if solving_time != "FAIL":
+                                total_solving_time += solving_time
+                                i = i + 1
+                        total_solving_time = total_solving_time / i
                         writeReport(total_solving_time,difficulty,solution_choice,min_cc_choice)
                         sys.exit()
                     else:
@@ -188,7 +190,10 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
                                 solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
                         else:
                             solving_time = CSPSolver(shape_array,solution_choice,grid,PG,clock,screen,min_cc_choice)
-                        total_solving_time += solving_time
+                        if solving_time != "FAIL":
+                            total_solving_time += solving_time
+                        else:
+                            total_solving_time = "FAIL"
                         
 
                 pos = PG.mouse.get_pos()
