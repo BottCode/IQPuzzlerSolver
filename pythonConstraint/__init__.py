@@ -53,7 +53,7 @@ import random
 import copy
 import time
 from .compat import xrange
-from ConnectedComponent.CC import *
+from ConnectedComponent.CC import minCC
 
 __all__ = ["Problem", "Variable", "Domain", "Unassigned",
            "Solver", "BacktrackingSolver", "RecursiveBacktrackingSolver",
@@ -1507,6 +1507,9 @@ class SomeNotInSetConstraint(Constraint):
                     return False
         return True
 
+
+# this functions modified the grid-view with side-effects
+
 def drawCurrentAssignemnt(assignment, grid, pg, clock, screen):
     for row in range(ROW):
         for column in range(COLUMN):
@@ -1581,7 +1584,3 @@ def drawCurrentShape(position,variable,grid,pg,clock,screen):
     pg.display.flip()
     # time.sleep(1)
 
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()

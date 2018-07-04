@@ -1,9 +1,8 @@
-from Shape.shape import *
-from Grid.grid import *
+from Shape.shape import Shape
+from Grid.grid import Grid
 import os
 import numpy as np
-from ConnectedComponent.CC import *
-import itertools
+from ConnectedComponent.CC import minCC
 
 
 def buildShapes(shapes_path, grid,fixed_variables):

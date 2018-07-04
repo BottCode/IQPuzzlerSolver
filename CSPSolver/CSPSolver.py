@@ -1,4 +1,4 @@
-from pythonConstraint import *
+from pythonConstraint import Problem, RecursiveBacktrackingSolver, MinConflictsSolver
 from ConnectedComponent.CC import minCC, checkCoordConstraint
 from time import time
 from Shape.buildShapes import getMinimunDimension

@@ -1,5 +1,5 @@
 #risolutore problema con DFS
-from ConnectedComponent.CC import *
+from ConnectedComponent.CC import minCC
 from pythonConstraint import drawCurrentShape
 from time import time
 

@@ -1,8 +1,8 @@
 # this script is used exclusively to generate starting configurations of the game
 
-from Shape.shape import *
-from Shape.buildShapes import *
-from Grid.grid import *
+from Shape.shape import Shape
+from Shape.buildShapes import buildShapes
+from Grid.grid import Grid
 
 def getConfig(n,path):
     grid = Grid(11,9)

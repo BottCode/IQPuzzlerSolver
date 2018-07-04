@@ -161,3 +161,5 @@ Level 4, solved with RecBT with CC check solved in: 18.43270468711853
 Level 4, solved with RecBT with CC check solved in: 18.813813090324402
 Level 4, solved with RecBT with CC check solved in: 18.23488438129425
 Level 4, solved with RecBT with CC check solved in: 14.56477415561676
+Level 0, solved with DFS with CC check solved in: 0.012572288513183594
+Level 0, solved with DFS with CC check solved in: 0.008529186248779297
