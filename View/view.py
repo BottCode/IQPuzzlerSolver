@@ -81,12 +81,12 @@ MARGIN = 5
     
 # this function computes the solution and draw each steps of it. 
 # The solution computing is at row 175-177, where you can see invocation of the solver (CSP or DFS)
-def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, difficulty, is_test_mode):
+def startingDraw(fixed_shape, shape_array, solution_choice, smart_choice, difficulty, is_test_mode):
     
-    if min_cc_choice == 0: # if user has NOT selected "Connected Components" checks
-        min_cc_choice = False
+    if smart_choice == 0: # if user has NOT selected "Connected Components" checks
+        smart_choice = False
     else:
-        min_cc_choice = True
+        smart_choice = True
     
     for row in range(ROW):
         # Add an empty array that will hold each cell
@@ -127,7 +127,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
     # Set title of screen
     text_algorithm = {1: "DFS", 2: "BT", 3: "RBT", 4: "MCBT"}
     is_with_cc = ""
-    if min_cc_choice:
+    if smart_choice:
         is_with_cc = "with CC check"
     PG.display.set_caption("Level "+str(difficulty)+" with "+text_algorithm[solution_choice]+" "+is_with_cc)
 
@@ -138,6 +138,8 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
     clock = PG.time.Clock()
     clock.tick(60)
     solving_time = 0
+    steps = 0
+
     text_is_test_mode = ""
     # -------- Main Program Loop -----------
     # Set the screen background
@@ -146,7 +148,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
             test_mode_event = PG.event.Event(0,message="testing mode")
             PG.event.post(test_mode_event)
             text_is_test_mode = "AV:"
-    
+
     while not done:
         for event in PG.event.get():  # User did something
             if event.type == PG.QUIT:  # If user clicked close
@@ -156,18 +158,18 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
                 if is_test_mode or (event.button == 1 and start_button.collidepoint(event.pos)):
                     if is_test_mode:
                         if solution_choice == 1:
-                            solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
+                            solving_time, steps = DFSSolver(shape_array,fixed_shape,grid,PG,screen,smart_choice) 
                         else:
-                            solving_time = CSPSolver(shape_array,solution_choice,grid,PG,screen,min_cc_choice)
+                            solving_time, steps = CSPSolver(shape_array,solution_choice,grid,PG,screen,smart_choice)
                           
-                        writeReport(solving_time,difficulty,solution_choice,min_cc_choice)
-                        sys.exit()
+                        writeReport(solving_time,steps,difficulty,solution_choice,smart_choice)
+                        sys.exit() 
                     else:
                         if solution_choice == 1:
-                            solving_time = DFSSolver(shape_array,fixed_shape,grid,PG,screen,min_cc_choice) 
+                            solving_time, steps = DFSSolver(shape_array,fixed_shape,grid,PG,screen,smart_choice) 
                         else:
-                            solving_time = CSPSolver(shape_array,solution_choice,grid,PG,screen,min_cc_choice)
-                        
+                            solving_time, steps = CSPSolver(shape_array,solution_choice,grid,PG,screen,smart_choice)
+                            # print("steo",steps)
                 pos = PG.mouse.get_pos()
                 # cyange the x/y screen coordinates to grid coordinates
                 column = pos[0] // (WIDTH + MARGIN)
@@ -180,7 +182,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
         PG.font.init()
         myfont = PG.font.SysFont('Comic Sans MS', 30)
         PG.draw.rect(screen, green, start_button)
-        button_surface = myfont.render("CLICK TO SOLVE!", False, (0, 0, 0))
+        button_surface = myfont.render("SOLVE!", False, (0, 0, 0))
         screen.blit(button_surface,start_button_text_rect)
         # Draw the grid
         for row in range(ROW):
@@ -200,7 +202,11 @@ def startingDraw(fixed_shape, shape_array, solution_choice, min_cc_choice, diffi
 
         # display solving time
         screen.fill(grey,(START_BUTTON_WIDTH + (MARGIN*3),(HEIGHT+MARGIN) * ROW + (MARGIN*3),300,100))
-        textsurface = myfont.render(text_is_test_mode + str(solving_time)[0:6], False, (0, 0, 0))
+        show_time = ""
+        # print("step",steps)
+        if steps > 0:
+            show_time = str(solving_time)[0:6]
+        textsurface = myfont.render(text_is_test_mode + show_time, False, (0, 0, 0))
         screen.blit(textsurface,((START_BUTTON_WIDTH + (MARGIN*3),(HEIGHT+MARGIN) * ROW + (MARGIN*3))))
 
 

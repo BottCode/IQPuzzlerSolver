@@ -3,7 +3,7 @@ from ConnectedComponent.CC import minCC, checkCoordConstraint
 from time import time
 from Shape.buildShapes import getMinimunDimension
 
-def CSPSolver(shape_array, csp_type_choice,grid, PG,screen,min_cc_choice):
+def CSPSolver(shape_array, csp_type_choice,grid, PG,screen,smart_choice):
     problem = None
 
     if csp_type_choice == 3:
@@ -24,6 +24,5 @@ def CSPSolver(shape_array, csp_type_choice,grid, PG,screen,min_cc_choice):
             problem.addConstraint(lambda a,b: checkCoordConstraint(a,b), [shape_array[i].color, shape_array[j].color])
 
     t0 = time()
-    if not problem.getSolution(grid,PG,screen,min_cc_choice):
-        return "FAIL"
-    return time() - t0
+    steps = problem.getSolution(grid,PG,screen,smart_choice)
+    return time() - t0, steps

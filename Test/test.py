@@ -1,6 +1,6 @@
 PATH = "Test/testResult.txt" 
 
-def writeReport(total_solving_time,difficulty,solution_choice,min_cc_choice):
+def writeReport(total_solving_time,steps,difficulty,solution_choice,smart_choice):
     report = "\nLevel " + str(difficulty) + ", solved with"
     if solution_choice == 1:
         report += " DFS "
@@ -11,10 +11,15 @@ def writeReport(total_solving_time,difficulty,solution_choice,min_cc_choice):
     else:
         report += " BT "
     
-    if min_cc_choice and solution_choice != 4:
+    if smart_choice and solution_choice != 4:
         report += "with CC check"
+    elif smart_choice:
+        report += "with Random Restart technique"
     
-    report += " solved in: " + str(total_solving_time)
+    if steps >= 0:
+        report += " solved in: " + str(total_solving_time) + " in " + str(steps) + " steps"
+    else:
+        report += " FAIL "
     
     with open(PATH,"a") as report_file:
         report_file.write(report)

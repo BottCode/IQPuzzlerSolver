@@ -271,7 +271,7 @@ class Problem(object):
                 raise ValueError(msg)
         self._constraints.append((constraint, variables))
 
-    def getSolution(self,grid,pg,screen,min_cc_choice):
+    def getSolution(self,grid,pg,screen,smart_choice):
         # # print("gg",grid)
         """
         Find and return a solution to the problem
@@ -289,7 +289,7 @@ class Problem(object):
         domains, constraints, vconstraints = self._getArgs()
         if not domains:
             return None
-        return self._solver.getSolution(domains, constraints, vconstraints,grid,pg,screen,min_cc_choice)
+        return self._solver.getSolution(domains, constraints, vconstraints,grid,pg,screen,smart_choice)
 
     def getSolutions(self,grid,pg,screen):
         """
@@ -510,13 +510,13 @@ class BacktrackingSolver(Solver):
         self.GRID = []
         self.PG = None
         self.SCREEN = None
+        self.steps = 0
 
-    def getSolutionIter(self, domains, constraints, vconstraints,grid,screen,min_cc_choice):
+    def getSolutionIter(self, domains, constraints, vconstraints,grid,screen,smart_choice):
         forwardcheck = self._forwardcheck
         assignments = {}
 
         queue = []
-        i = 0
         while True:
             # Mix the Degree and Minimum Remaing Values (MRV) heuristics
             lst = [(-len(vconstraints[variable]),
@@ -571,13 +571,13 @@ class BacktrackingSolver(Solver):
                         domain.pushState()
 
                 min_dimension = 3
-                if min_cc_choice:
+                if smart_choice:
                     to_assign_len = [len(domains[var][0]) for var in domains.keys() if var not in assignments]
                     if to_assign_len:
                         min_dimension = min(to_assign_len)
 
                 for constraint, variables in vconstraints[variable]:
-                    if not constraint(variables, domains, assignments, pushdomains) or (min_cc_choice and (0 < minCC(assignments.values()) < min_dimension)):
+                    if not constraint(variables, domains, assignments, pushdomains) or (smart_choice and (0 < minCC(assignments.values()) < min_dimension)):
                         # Value is not good.
                         break
                 else:
@@ -591,19 +591,21 @@ class BacktrackingSolver(Solver):
 
             # Push state before looking for next variable.
             queue.append((variable, values, pushdomains))
+            self.steps += 1
             drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
         raise RuntimeError("Can't happen")
 
-    def getSolution(self, domains, constraints, vconstraints,grid, pg,screen,min_cc_choice):
+    def getSolution(self, domains, constraints, vconstraints,grid, pg,screen,smart_choice):
         # # print("first backtracking")
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
-        iter = self.getSolutionIter(domains, constraints, vconstraints,grid,screen,min_cc_choice)
+        iter = self.getSolutionIter(domains, constraints, vconstraints,grid,screen,smart_choice)
         try:
-            return next(iter)
+            next(iter)
+            return self.steps
         except StopIteration:
-            return None
+            return self.steps
 
     def getSolutions(self, domains, constraints, vconstraints, grid, pg,screen):
         print("dfsdfdfsdfsdf")
@@ -648,9 +650,10 @@ class RecursiveBacktrackingSolver(Solver):
         self.GRID = []
         self.PG = None
         self.SCREEN = None
+        self.steps = 0
 
     def recursiveBacktracking(self, solutions, domains, vconstraints,
-                              assignments, single,grid,pg,screen,min_cc_choice):
+                              assignments, single,grid,pg,screen,smart_choice):
 
         # Mix the Degree and Minimum Remaing Values (MRV) heuristics
         lst = [(-len(vconstraints[variable]),
@@ -675,7 +678,7 @@ class RecursiveBacktrackingSolver(Solver):
             pushdomains = None
 
         min_dimension = 3
-        if min_cc_choice:
+        if smart_choice:
             to_assign_len = [len(domains[var][0]) for var in domains.keys() if var not in assignments]
             if to_assign_len:
                 min_dimension = min(to_assign_len)
@@ -690,14 +693,15 @@ class RecursiveBacktrackingSolver(Solver):
 
 
             for constraint, variables in vconstraints[variable] :
-                if not constraint(variables, domains, assignments, pushdomains)  or (min_cc_choice and (0 < minCC(assignments.values()) < min_dimension)):
+                if not constraint(variables, domains, assignments, pushdomains)  or (smart_choice and (0 < minCC(assignments.values()) < min_dimension)):
                     # Value is not good.
                     break
             else:
                 # Value is good. Recurse and get next variable.
                 drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
+                self.steps += 1
                 self.recursiveBacktracking(solutions, domains, vconstraints,
-                                           assignments, single,grid,pg,screen,min_cc_choice)
+                                           assignments, single,grid,pg,screen,smart_choice)
                 if solutions and single:
                     return solutions
             if pushdomains:
@@ -706,13 +710,12 @@ class RecursiveBacktrackingSolver(Solver):
         del assignments[variable]
         return solutions
 
-    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen,min_cc_choice):
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen,smart_choice):
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
-
-        solutions = self.recursiveBacktracking([], domains, vconstraints,{}, True,grid,pg,screen,min_cc_choice)
-        return solutions and solutions[0] or None
+        solutions = self.recursiveBacktracking([], domains, vconstraints,{}, True,grid,pg,screen,smart_choice)
+        return self.steps
 
     def getSolutions(self, domains, constraints, vconstraints):
         return self.recursiveBacktracking([], domains, vconstraints,
@@ -754,7 +757,19 @@ class MinConflictsSolver(Solver):
         self.SCREEN = None
         self.CLOCK = None
 
-    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen, min_cc_choice):
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen, smart_choice):
+        solution = self.solve(domains, constraints, vconstraints,grid,pg,screen)
+        steps = 1
+        while solution is None and smart_choice:
+            solution = self.solve(domains, constraints, vconstraints,grid,pg,screen)
+            steps += 1
+            # print("Fallimento",steps) 
+        if solution is None:
+            return -1
+        else: 
+            return steps
+
+    def solve(self, domains, constraints, vconstraints,grid,pg,screen):
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
@@ -799,6 +814,9 @@ class MinConflictsSolver(Solver):
             if not conflicted:
                 return assignments
         return None
+        
+
+
 
 # ----------------------------------------------------------------------
 # Variables
