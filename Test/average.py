@@ -105,15 +105,15 @@ def generateScript():
     with open(SCRIPT_PATH,"a") as script_file:
         script_file.write("#! /bin/sh\n> Test/testResult.txt\n")
         for level in range(5):
-            for algorithm in range(5):
+            for algorithm in range(1,5):
                 for smart in range(2):
                     if not ((level == 3 and algorithm == 0) or (level == 4 and algorithm == 0)):
                         for i in range(TEST_FOR_EACH_COMB):
                             script_file.write("python3 main.py "+str(level)+" "+str(algorithm)+" "+str(smart)+ "\n")
-        script_file.write("\n")
-    script_file.write("echo \"STOP\" >> Test/testResult.txt \n python3 Test/average.py")
+            script_file.write("\n")
+        script_file.write("echo \"STOP\" >> Test/testResult.txt \n python3 Test/average.py")
 
-#generateScript()
-computeAverage()
+generateScript()
+#computeAverage()
 
 
