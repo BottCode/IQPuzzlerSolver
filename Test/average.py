@@ -113,8 +113,7 @@ def generateScript():
         script_file.write("\n")
     script_file.write("echo \"STOP\" >> Test/testResult.txt \n python3 Test/average.py")
 
-generateScript()
-#computeAverage()
-#print("\\begin{table} \\begin{tabular}{|l||*{4}{c|}}\\hline\\backslashbox{Miglioria}{Solver}&\\makebox{DFS}&\\makebox{Backtracking}&\\makebox{Recursive Backtracking}	&\\makebox{MinConflicts}\\\\ \\hline Sì&" + dict_data["DFSm"][0] + (dict_data["DFSm"][1]) + "&" + dict_data["BTm"][0] + (dict_data["BTm"][1])+"&"+dict_data["RBTm"][0] + (dict_data["RBTm"][1])+"&"+dict_data["MCm"][0] + (dict_data["MCm"][1])  +" \\\\ \\hline No&"+dict_data["DFS"][0] + (dict_data["DFS"][1])+"&"+dict_data["BT"][0] + (dict_data["BT"][1])+"&"+dict_data["RBT"][0] + (dict_data["RBT"][1])+"&"+dict_data["MC"][0] + (dict_data["MC"][1]) +"  \\\\ \\hline \\end{tabular}")
+#generateScript()
+computeAverage()
 
 
