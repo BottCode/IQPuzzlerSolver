@@ -1,4 +1,3 @@
-
 Level 0, solved with DFS  solved in: 0.04314732551574707 in 30 steps
 Level 0, solved with DFS  solved in: 0.05218100547790527 in 30 steps
 Level 0, solved with DFS  solved in: 0.09131026268005371 in 30 steps
