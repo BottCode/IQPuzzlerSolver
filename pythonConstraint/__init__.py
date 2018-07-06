@@ -608,7 +608,6 @@ class BacktrackingSolver(Solver):
             return self.steps
 
     def getSolutions(self, domains, constraints, vconstraints, grid, pg,screen):
-        print("dfsdfdfsdfsdf")
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
@@ -816,6 +815,7 @@ class MinConflictsSolver(Solver):
                 return assignments, self.steps
         return None, self.steps
         
+
 
 
 
@@ -1598,4 +1598,3 @@ def drawCurrentShape(position,variable,grid,pg,screen):
                             HEIGHT])
     pg.display.flip()
     # time.sleep(1)
-
