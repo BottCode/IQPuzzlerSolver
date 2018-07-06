@@ -1,5 +1,5 @@
 PATH = "Test/testResult.txt" 
-
+SCRIPT_PATH = "Test("
 def writeReport(total_solving_time,steps,difficulty,solution_choice,smart_choice):
     report = "\nLevel " + str(difficulty) + ", solved with"
     if solution_choice == 1:
@@ -23,3 +23,4 @@ def writeReport(total_solving_time,steps,difficulty,solution_choice,smart_choice
     
     with open(PATH,"a") as report_file:
         report_file.write(report)
+

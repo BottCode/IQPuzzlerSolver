@@ -3,39 +3,31 @@
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì&0.0192 (4.0)&0.0857 (11.0)&0.0708 (11.0)&0.0264 (1.0) \\ \hline 
- No&0.0786 (30.0)&0.0319 (11.0)&0.0327 (11.0)&0.0208 (1.0)  \\ \hline 
+ Sì& ()& ()& ()&0.0266 (3.5) \\ \hline 
+ No& ()& ()& ()&0.0297 (3.29166)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì&0.0483 (9.66666)&0.1135 (12.0)&0.1104 (12.0)&0.0668 (1.0) \\ \hline 
- No&0.2974 (147.5)&0.0480 (12.0)&0.0506 (13.0)&0.0910 (1.0)  \\ \hline 
+ Sì& ()& ()& ()&0.7783 (1040.70) \\ \hline 
+ No& ()& ()& ()&0.0767 (28.2727)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì&0.3546 (78.3333)&0.1969 (22.0)&0.1874 (17.0)&0.3349 (1.0) \\ \hline 
- No&1.8782 (1472.5)&0.1241 (32.0)&0.0984 (19.0)&0.2641 (1.0)  \\ \hline 
+ Sì& ()& ()& ()&0.4914 (449.25) \\ \hline 
+ No& ()& ()& ()&0.2825 (112.333)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì&36.227 (12343.8)&1.5018 (198.0)&0.5316 (55.0)&40.468 (15.1666) \\ \hline 
- No& ()&1.3156 (1179.0)&0.8229 (572.0)& ()  \\ \hline 
- \end{tabular} 
- \end{table}
- \begin{table} 
- \begin{tabular}{|l||*{4}{c|}}\hline 
- \backslashbox{Miglioria}{Solver} 
- &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()&1.4544 (184.0)&16.338 (2640.0)&24.502 (5.42857) \\ \hline 
- No& ()&5.1879 (4002.0)&26.403 (23971.0)& ()  \\ \hline 
+ Sì& ()& ()& ()&45.735 (328453.) \\ \hline 
+ No& ()& ()& ()&0.6301 (318.0)  \\ \hline 
  \end{tabular} 
  \end{table}
