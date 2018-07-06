@@ -265,3 +265,5 @@ python3 main.py 4 4 1
 python3 main.py 4 4 1
 python3 main.py 4 4 1
 python3 main.py 4 4 1
+
+python3 Test/average.py

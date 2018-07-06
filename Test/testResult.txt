@@ -220,3 +220,107 @@ Level 4, solved with MinConfl with Random Restart technique solved in: 8.3588881
 Level 4, solved with MinConfl with Random Restart technique solved in: 5.366269588470459 in 1 steps
 Level 4, solved with MinConfl with Random Restart technique solved in: 21.87591004371643 in 5 steps
 Level 4, solved with MinConfl with Random Restart technique solved in: 54.872042417526245 in 12 steps
+Level 0, solved with DFS AVG TIME: 0.0786, AVG STEPS: 30.0
+Level 0, solved with DFS with CC check solved AVG TIME: 0.0192, AVG STEPS: 4.0
+Level 0, solved with BT AVG TIME: 0.0319, AVG STEPS: 11.0
+Level 0, solved with BT with CC check solved AVG TIME: 0.0857, AVG STEPS: 11.0
+Level 0, solved with RecBT AVG TIME: 0.0327, AVG STEPS: 11.0
+Level 0, solved with RecBT with CC check solved AVG TIME: 0.0708, AVG STEPS: 11.0
+Level 0, solved with MinConfl AVG TIME: 0.0208, AVG STEPS: 1.0
+Level 0, solved with MinConfl with Random Restart technique AVG TIME: 0.0264, AVG STEPS: 1.0
+Level 1, solved with DFS AVG TIME: 0.2974, AVG STEPS: 147.5
+Level 1, solved with DFS with CC check solved AVG TIME: 0.0483, AVG STEPS: 9.6666
+Level 1, solved with BT AVG TIME: 0.0480, AVG STEPS: 12.0
+Level 1, solved with BT with CC check solved AVG TIME: 0.1135, AVG STEPS: 12.0
+Level 1, solved with RecBT AVG TIME: 0.0506, AVG STEPS: 13.0
+Level 1, solved with RecBT with CC check solved AVG TIME: 0.1104, AVG STEPS: 12.0
+Level 1, solved with MinConfl AVG TIME: 0.0910, AVG STEPS: 1.0
+Level 1, solved with MinConfl with Random Restart technique AVG TIME: 0.0668, AVG STEPS: 1.0
+Level 2, solved with DFS AVG TIME: 1.8782, AVG STEPS: 1472.5
+Level 2, solved with DFS with CC check solved AVG TIME: 0.3546, AVG STEPS: 78.333
+Level 2, solved with BT AVG TIME: 0.1241, AVG STEPS: 32.0
+Level 2, solved with BT with CC check solved AVG TIME: 0.1969, AVG STEPS: 22.0
+Level 2, solved with RecBT AVG TIME: 0.0984, AVG STEPS: 19.0
+Level 2, solved with RecBT with CC check solved AVG TIME: 0.1874, AVG STEPS: 17.0
+Level 2, solved with MinConfl AVG TIME: 0.2641, AVG STEPS: 1.0
+Level 2, solved with MinConfl with Random Restart technique AVG TIME: 0.3349, AVG STEPS: 1.0
+Level 3, solved with DFS with CC check solved AVG TIME: 36.227, AVG STEPS: 12343.
+Level 3, solved with BT AVG TIME: 1.3156, AVG STEPS: 1179.0
+Level 3, solved with BT with CC check solved AVG TIME: 1.5018, AVG STEPS: 198.0
+Level 3, solved with RecBT AVG TIME: 0.8229, AVG STEPS: 572.0
+Level 3, solved with RecBT with CC check solved AVG TIME: 0.5316, AVG STEPS: 55.0
+Level 3, solved with MinConfl with Random Restart technique AVG TIME: 40.468, AVG STEPS: 15.166
+Level 4, solved with BT AVG TIME: 5.1879, AVG STEPS: 4002.0
+Level 4, solved with BT with CC check solved AVG TIME: 1.4544, AVG STEPS: 184.0
+Level 4, solved with RecBT AVG TIME: 26.403, AVG STEPS: 23971.
+Level 4, solved with RecBT with CC check solved AVG TIME: 16.338, AVG STEPS: 2640.0
+Level 0, solved with DFS AVG TIME: 0.0786, AVG STEPS: 30.0
+Level 0, solved with DFS with CC check solved AVG TIME: 0.0192, AVG STEPS: 4.0
+Level 0, solved with BT AVG TIME: 0.0319, AVG STEPS: 11.0
+Level 0, solved with BT with CC check solved AVG TIME: 0.0857, AVG STEPS: 11.0
+Level 0, solved with RecBT AVG TIME: 0.0327, AVG STEPS: 11.0
+Level 0, solved with RecBT with CC check solved AVG TIME: 0.0708, AVG STEPS: 11.0
+Level 0, solved with MinConfl AVG TIME: 0.0208, AVG STEPS: 1.0
+Level 0, solved with MinConfl with Random Restart technique AVG TIME: 0.0264, AVG STEPS: 1.0
+Level 1, solved with DFS AVG TIME: 0.2974, AVG STEPS: 147.5
+Level 1, solved with DFS with CC check solved AVG TIME: 0.0483, AVG STEPS: 9.6666
+Level 1, solved with BT AVG TIME: 0.0480, AVG STEPS: 12.0
+Level 1, solved with BT with CC check solved AVG TIME: 0.1135, AVG STEPS: 12.0
+Level 1, solved with RecBT AVG TIME: 0.0506, AVG STEPS: 13.0
+Level 1, solved with RecBT with CC check solved AVG TIME: 0.1104, AVG STEPS: 12.0
+Level 1, solved with MinConfl AVG TIME: 0.0910, AVG STEPS: 1.0
+Level 1, solved with MinConfl with Random Restart technique AVG TIME: 0.0668, AVG STEPS: 1.0
+Level 2, solved with DFS AVG TIME: 1.8782, AVG STEPS: 1472.5
+Level 2, solved with DFS with CC check solved AVG TIME: 0.3546, AVG STEPS: 78.333
+Level 2, solved with BT AVG TIME: 0.1241, AVG STEPS: 32.0
+Level 2, solved with BT with CC check solved AVG TIME: 0.1969, AVG STEPS: 22.0
+Level 2, solved with RecBT AVG TIME: 0.0984, AVG STEPS: 19.0
+Level 2, solved with RecBT with CC check solved AVG TIME: 0.1874, AVG STEPS: 17.0
+Level 2, solved with MinConfl AVG TIME: 0.2641, AVG STEPS: 1.0
+Level 2, solved with MinConfl with Random Restart technique AVG TIME: 0.3349, AVG STEPS: 1.0
+Level 3, solved with DFS with CC check solved AVG TIME: 36.227, AVG STEPS: 12343.
+Level 3, solved with BT AVG TIME: 1.3156, AVG STEPS: 1179.0
+Level 3, solved with BT with CC check solved AVG TIME: 1.5018, AVG STEPS: 198.0
+Level 3, solved with RecBT AVG TIME: 0.8229, AVG STEPS: 572.0
+Level 3, solved with RecBT with CC check solved AVG TIME: 0.5316, AVG STEPS: 55.0
+Level 3, solved with MinConfl with Random Restart technique AVG TIME: 40.468, AVG STEPS: 15.166
+Level 4, solved with BT AVG TIME: 5.1879, AVG STEPS: 4002.0
+Level 4, solved with BT with CC check solved AVG TIME: 1.4544, AVG STEPS: 184.0
+Level 4, solved with RecBT AVG TIME: 26.403, AVG STEPS: 23971.
+Level 4, solved with RecBT with CC check solved AVG TIME: 16.338, AVG STEPS: 2640.0
+Level 4, solved with MinConfl with Random Restart technique AVG TIME: 24.502, AVG STEPS: 5.4285
+Level 0, solved with DFS AVG TIME: 0.0786, AVG STEPS: 30.0
+Level 0, solved with DFS with CC check solved AVG TIME: 0.0192, AVG STEPS: 4.0
+Level 0, solved with BT AVG TIME: 0.0319, AVG STEPS: 11.0
+Level 0, solved with BT with CC check solved AVG TIME: 0.0857, AVG STEPS: 11.0
+Level 0, solved with RecBT AVG TIME: 0.0327, AVG STEPS: 11.0
+Level 0, solved with RecBT with CC check solved AVG TIME: 0.0708, AVG STEPS: 11.0
+Level 0, solved with MinConfl AVG TIME: 0.0208, AVG STEPS: 1.0
+Level 0, solved with MinConfl with Random Restart technique AVG TIME: 0.0264, AVG STEPS: 1.0
+Level 1, solved with DFS AVG TIME: 0.2974, AVG STEPS: 147.5
+Level 1, solved with DFS with CC check solved AVG TIME: 0.0483, AVG STEPS: 9.6666
+Level 1, solved with BT AVG TIME: 0.0480, AVG STEPS: 12.0
+Level 1, solved with BT with CC check solved AVG TIME: 0.1135, AVG STEPS: 12.0
+Level 1, solved with RecBT AVG TIME: 0.0506, AVG STEPS: 13.0
+Level 1, solved with RecBT with CC check solved AVG TIME: 0.1104, AVG STEPS: 12.0
+Level 1, solved with MinConfl AVG TIME: 0.0910, AVG STEPS: 1.0
+Level 1, solved with MinConfl with Random Restart technique AVG TIME: 0.0668, AVG STEPS: 1.0
+Level 2, solved with DFS AVG TIME: 1.8782, AVG STEPS: 1472.5
+Level 2, solved with DFS with CC check solved AVG TIME: 0.3546, AVG STEPS: 78.333
+Level 2, solved with BT AVG TIME: 0.1241, AVG STEPS: 32.0
+Level 2, solved with BT with CC check solved AVG TIME: 0.1969, AVG STEPS: 22.0
+Level 2, solved with RecBT AVG TIME: 0.0984, AVG STEPS: 19.0
+Level 2, solved with RecBT with CC check solved AVG TIME: 0.1874, AVG STEPS: 17.0
+Level 2, solved with MinConfl AVG TIME: 0.2641, AVG STEPS: 1.0
+Level 2, solved with MinConfl with Random Restart technique AVG TIME: 0.3349, AVG STEPS: 1.0
+Level 3, solved with DFS with CC check solved AVG TIME: 36.227, AVG STEPS: 12343.
+Level 3, solved with BT AVG TIME: 1.3156, AVG STEPS: 1179.0
+Level 3, solved with BT with CC check solved AVG TIME: 1.5018, AVG STEPS: 198.0
+Level 3, solved with RecBT AVG TIME: 0.8229, AVG STEPS: 572.0
+Level 3, solved with RecBT with CC check solved AVG TIME: 0.5316, AVG STEPS: 55.0
+Level 3, solved with MinConfl with Random Restart technique AVG TIME: 40.468, AVG STEPS: 15.166
+Level 4, solved with BT AVG TIME: 5.1879, AVG STEPS: 4002.0
+Level 4, solved with BT with CC check solved AVG TIME: 1.4544, AVG STEPS: 184.0
+Level 4, solved with RecBT AVG TIME: 26.403, AVG STEPS: 23971.
+Level 4, solved with RecBT with CC check solved AVG TIME: 16.338, AVG STEPS: 2640.0
+Level 4, solved with MinConfl with Random Restart technique AVG TIME: 24.502, AVG STEPS: 5.4285
