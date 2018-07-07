@@ -179,6 +179,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, smart_choice, diffic
                 # print("Click ", pos, "Grid coordinates: ", row, column)
 
         # Draw the start button
+        print(steps)
         PG.font.init()
         myfont = PG.font.SysFont('Comic Sans MS', 30)
         PG.draw.rect(screen, green, start_button)

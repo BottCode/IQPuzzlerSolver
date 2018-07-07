@@ -3,31 +3,39 @@
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()& ()& ()&0.0266 (3.5) \\ \hline 
- No& ()& ()& ()&0.0297 (3.29166)  \\ \hline 
+ Sì&0.0107 (4.175)&0.0519 (11.0)&0.0495 (11.0)&0.0129 (3.4) \\ \hline 
+ No&0.0319 (24.825)&0.0178 (11.0)&0.0175 (11.0)&0.0142 (4.325)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()& ()& ()&0.7783 (1040.70) \\ \hline 
- No& ()& ()& ()&0.0767 (28.2727)  \\ \hline 
+ Sì&0.0271 (9.75)&0.0666 (12.0)&0.0704 (12.0)&0.5013 (1975.264) \\ \hline 
+ No&0.1081 (94.675)&0.0257 (12.0)&0.0270 (13.0)&0.0377 (20.821428571428573)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()& ()& ()&0.4914 (449.25) \\ \hline 
- No& ()& ()& ()&0.2825 (112.333)  \\ \hline 
+ Sì&0.1429 (57.75)&0.1405 (22.0)&0.1227 (17.0)&0.6263 (1414.7) \\ \hline 
+ No&1.9350 (1901.25)&0.0695 (32.0)&0.0579 (19.0)&0.2054 (145.9444)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()& ()& ()&45.735 (328453.) \\ \hline 
- No& ()& ()& ()&0.6301 (318.0)  \\ \hline 
+ Sì& ()&1.0607 (198.0)&0.3522 (55.0)&30.473 (65528503) \\ \hline 
+ No& ()&1.0379 (1179.0)&0.5709 (572.0)&0.1359 (36.0)  \\ \hline 
+ \end{tabular} 
+ \end{table}
+ \begin{table} 
+ \begin{tabular}{|l||*{4}{c|}}\hline 
+ \backslashbox{Miglioria}{Solver} 
+ &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
+ Sì& ()&1.0781 (184.0)&13.126 (2640.0)&17.266 (21026751) \\ \hline 
+ No& ()&3.8761 (4002.0)&23.131 (23971.0)&2.0668 (796.4285)  \\ \hline 
  \end{tabular} 
  \end{table}
