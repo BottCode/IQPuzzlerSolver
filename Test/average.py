@@ -1,7 +1,7 @@
 PATH = "Test/testResult.txt"
 TABLE_LATEX_PATH ="Test/tableResult.txt"
 SCRIPT_PATH = "Test/scriptTest.sh"
-TEST_FOR_EACH_COMB = 40
+TEST_FOR_EACH_COMB = 20
 
 def computeAverage():
     open(TABLE_LATEX_PATH,"w").close()
@@ -107,8 +107,8 @@ def generateScript():
         for level in range(5):
             for algorithm in range(1,5):
                 for smart in range(2):
-                    if not ((level == 3 and algorithm == 1) or (level == 4 and algorithm == 1)):
-                        for i in range(TEST_FOR_EACH_COMB):
+                    if not ((level == 3 and algorithm == 1 and smart == 0) or (level == 4 and algorithm == 1)):
+                        for _ in range(TEST_FOR_EACH_COMB):
                             script_file.write("python3 main.py "+str(level)+" "+str(algorithm)+" "+str(smart)+ "\n")
             script_file.write("\n")
         script_file.write("echo \"STOP\" >> Test/testResult.txt \n python3 Test/average.py")

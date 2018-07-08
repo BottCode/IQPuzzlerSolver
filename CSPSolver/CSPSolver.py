@@ -24,12 +24,6 @@ def CSPSolver(shape_array, csp_type_choice,grid, PG,screen,smart_choice):
             problem.addConstraint(lambda a,b: checkCoordConstraint(a,b), [shape_array[i].color, shape_array[j].color])
 
     t0 = time()
-    s = 0
-    while True:
-        steps = problem.getSolution(grid,PG,screen,smart_choice)
-        print("SPETPS", steps)
-        s += steps
-        if steps < 995:
-            break
-    print("SOL",s)
-    return time() - t0, s
+    steps = problem.getSolution(grid,PG,screen,smart_choice)
+    print("SOL",steps)
+    return time() - t0, steps

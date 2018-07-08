@@ -179,7 +179,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, smart_choice, diffic
                 # print("Click ", pos, "Grid coordinates: ", row, column)
 
         # Draw the start button
-        print(steps)
+        # print(steps)
         PG.font.init()
         myfont = PG.font.SysFont('Comic Sans MS', 30)
         PG.draw.rect(screen, green, start_button)
@@ -207,6 +207,8 @@ def startingDraw(fixed_shape, shape_array, solution_choice, smart_choice, diffic
         # print("step",steps)
         if steps > 0:
             show_time = str(solving_time)[0:6]
+        elif steps == -1:
+            show_time = "FAIL"
         textsurface = myfont.render(text_is_test_mode + show_time, False, (0, 0, 0))
         screen.blit(textsurface,((START_BUTTON_WIDTH + (MARGIN*3),(HEIGHT+MARGIN) * ROW + (MARGIN*3))))
 

@@ -757,29 +757,27 @@ class MinConflictsSolver(Solver):
         self.CLOCK = None
         self.steps = 0
 
-    '''def getSolution(self, domains, constraints, vconstraints,grid,pg,screen, smart_choice):
+    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen, smart_choice):
         solution, self.steps = self.solve(domains, constraints, vconstraints,grid,pg,screen)
         while solution is None and smart_choice:
-            solution, stepsaux = self.solve(domains, constraints, vconstraints,grid,pg,screen)
-            self.steps += stepsaux
-            # print("Fallimento",steps)
+            solution, self.steps = self.solve(domains, constraints, vconstraints,grid,pg,screen)
+            print("Fallimento",self.steps)
         if solution is None:
             return -1
         else:
-            return self.steps'''
+            return self.steps
 
-    def getSolution(self, domains, constraints, vconstraints,grid,pg,screen,smart_choice):
+    def solve(self, domains, constraints, vconstraints,grid,pg,screen):
         self.GRID = grid
         self.PG = pg
         self.SCREEN = screen
-        self.steps = 0
         assignments = {}
         # Initial assignment
         for variable in domains:
             assignments[variable] = random.choice(domains[variable])
-
+        #print("RESTART")
         drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
-
+        #time.sleep(4)
         for _ in xrange(self._steps):
             conflicted = False
             lst = list(domains.keys())
@@ -814,8 +812,8 @@ class MinConflictsSolver(Solver):
             self.steps += 1
             drawCurrentAssignemnt(assignments,self.GRID,self.PG,self.SCREEN)
             if not conflicted:
-                return self.steps
-        return self.steps
+                return assignments, self.steps
+        return None, self.steps
 
 
 
