@@ -291,7 +291,7 @@ class Problem(object):
             return None
         return self._solver.getSolution(domains, constraints, vconstraints,grid,pg,screen,smart_choice)
 
-    def getSolutions(self,grid,pg,screen):
+    def getSolutions(self,grid,pg,screen, smart_choice):
         """
         Find and return all solutions to the problem
         Example:
@@ -307,7 +307,7 @@ class Problem(object):
         domains, constraints, vconstraints = self._getArgs()
         if not domains:
             return []
-        return self._solver.getSolutions(domains, constraints, vconstraints,grid,pg,screen)
+        return self._solver.getSolutions(domains, constraints, vconstraints,grid,pg,screen,smart_choice)
 
     def getSolutionIter(self):
         """
@@ -607,11 +607,11 @@ class BacktrackingSolver(Solver):
         except StopIteration:
             return self.steps
 
-    def getSolutions(self, domains, constraints, vconstraints, grid, pg,screen):
+    def getSolutions(self, domains, constraints, vconstraints, grid, pg,screen,smart_choice):
         self.GRID = grid
         self.PG = pg
-        self.SCREEN = screen
-        return list(self.getSolutionIter(domains, constraints, vconstraints, grid,screen))
+        self.SCREEN = screen 
+        return list(self.getSolutionIter(domains, constraints, vconstraints, grid,screen,smart_choice))
 
 
 class RecursiveBacktrackingSolver(Solver):

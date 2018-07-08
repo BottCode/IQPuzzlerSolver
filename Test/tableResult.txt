@@ -3,23 +3,39 @@
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()& ()& ()&0.3609 (132.95) \\ \hline 
- No& ()& ()& ()& ()  \\ \hline 
+ Sì& ()& ()& ()&0.0184 (2.275) \\ \hline 
+ No& ()& ()& ()&0.0223 (2.525)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()& ()& ()&32.777 (15546.95) \\ \hline 
- No& ()& ()& ()& ()  \\ \hline 
+ Sì& ()& ()& ()&0.7078 (409.925) \\ \hline 
+ No& ()& ()& ()&0.0539 (10.51851)  \\ \hline 
  \end{tabular} 
  \end{table}
  \begin{table} 
  \begin{tabular}{|l||*{4}{c|}}\hline 
  \backslashbox{Miglioria}{Solver} 
  &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
- Sì& ()& ()& ()&17.830 (3707.65) \\ \hline 
- No& ()& ()& ()& ()  \\ \hline 
+ Sì& ()& ()& ()&0.4244 (180.475) \\ \hline 
+ No& ()& ()& ()&0.1850 (52.89473)  \\ \hline 
+ \end{tabular} 
+ \end{table}
+ \begin{table} 
+ \begin{tabular}{|l||*{4}{c|}}\hline 
+ \backslashbox{Miglioria}{Solver} 
+ &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
+ Sì& ()& ()& ()&32.192 (15323.43) \\ \hline 
+ No& ()& ()& ()&2.5611 (857.0)  \\ \hline 
+ \end{tabular} 
+ \end{table}
+ \begin{table} 
+ \begin{tabular}{|l||*{4}{c|}}\hline 
+ \backslashbox{Miglioria}{Solver} 
+ &\makebox{DFS}&\makebox{Backtracking}&\makebox{Recursive Backtracking}	&\makebox{MinConflicts}\\ \hline 
+ Sì& ()& ()& ()&18.794 (3416.857) \\ \hline 
+ No& ()& ()& ()&2.9350 (458.77777777777777)  \\ \hline 
  \end{tabular} 
  \end{table}

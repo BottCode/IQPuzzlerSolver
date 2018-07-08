@@ -25,5 +25,4 @@ def CSPSolver(shape_array, csp_type_choice,grid, PG,screen,smart_choice):
 
     t0 = time()
     steps = problem.getSolution(grid,PG,screen,smart_choice)
-    print("SOL",steps)
     return time() - t0, steps

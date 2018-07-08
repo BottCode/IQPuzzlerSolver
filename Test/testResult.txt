@@ -1,65 +1,412 @@
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.12291169166564941 in 33 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.07582664489746094 in 9 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.0985109806060791 in 9 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.07089877128601074 in 2 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.1154484748840332 in 20 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.08285069465637207 in 5 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.2025454044342041 in 27 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.3417203426361084 in 68 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.12386703491210938 in 20 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.18848514556884766 in 43 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 2.379300117492676 in 1005 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.19526934623718262 in 53 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.11054158210754395 in 31 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.10077476501464844 in 10 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.20906734466552734 in 44 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.28133606910705566 in 91 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.19674968719482422 in 42 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.347003698348999 in 116 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 1.9148163795471191 in 1025 steps
-Level 2, solved with MinConfl with Random Restart technique solved in: 0.06130480766296387 in 6 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 37.972962379455566 in 17515 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 49.3262619972229 in 20370 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 0.23453259468078613 in 24 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 0.652545690536499 in 240 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 36.55090808868408 in 17708 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 51.72464442253113 in 24488 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 38.348074197769165 in 18536 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 32.51638603210449 in 15082 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 2.2401371002197266 in 837 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 16.735326051712036 in 7616 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 56.65495729446411 in 27952 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 41.606677770614624 in 19927 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 4.356266736984253 in 1838 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 6.3054046630859375 in 2139 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 27.443569898605347 in 12949 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 10.147722959518433 in 4049 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 88.99252390861511 in 44407 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 83.31535768508911 in 41305 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 66.4853880405426 in 32531 steps
-Level 3, solved with MinConfl with Random Restart technique solved in: 3.940359354019165 in 1426 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 21.383479356765747 in 4520 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 15.752620220184326 in 3240 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 10.218451499938965 in 2118 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 1.001990556716919 in 98 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 57.28723335266113 in 13763 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 3.79020357131958 in 640 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 21.4774432182312 in 4592 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 11.11812949180603 in 1849 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 0.7591629028320312 in 91 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 34.10779929161072 in 7531 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 6.77216649055481 in 947 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 7.738339185714722 in 1055 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 4.639742374420166 in 683 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 4.058918476104736 in 587 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 6.28991174697876 in 1046 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 5.098019123077393 in 658 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 16.713244915008545 in 3175 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 58.52546548843384 in 14069 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 33.10127305984497 in 6166 steps
-Level 4, solved with MinConfl with Random Restart technique solved in: 36.78528714179993 in 7325 steps
+Level 0, solved with MinConfl  solved in: 0.015707731246948242 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.015941619873046875 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.011424779891967773 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.016403675079345703 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.015563249588012695 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.01808309555053711 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.017473459243774414 in 3 steps
+Level 0, solved with MinConfl  solved in: 0.012433528900146484 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.023377180099487305 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.01923084259033203 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.02058696746826172 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.02415323257446289 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.02752685546875 in 3 steps
+Level 0, solved with MinConfl  solved in: 0.02295374870300293 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.04394412040710449 in 7 steps
+Level 0, solved with MinConfl  solved in: 0.02113795280456543 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.028951406478881836 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.021040916442871094 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.03376960754394531 in 3 steps
+Level 0, solved with MinConfl  solved in: 0.016440391540527344 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.020633459091186523 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.021681785583496094 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.019662857055664062 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.014540672302246094 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.023981094360351562 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.018893003463745117 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.024606704711914062 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.02013373374938965 in 3 steps
+Level 0, solved with MinConfl  solved in: 0.03809499740600586 in 7 steps
+Level 0, solved with MinConfl  solved in: 0.03312325477600098 in 4 steps
+Level 0, solved with MinConfl  solved in: 0.020540714263916016 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.019314050674438477 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.018764972686767578 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.02139759063720703 in 3 steps
+Level 0, solved with MinConfl  solved in: 0.021387100219726562 in 3 steps
+Level 0, solved with MinConfl  solved in: 0.02588510513305664 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.022474050521850586 in 3 steps
+Level 0, solved with MinConfl  solved in: 0.025398969650268555 in 2 steps
+Level 0, solved with MinConfl  solved in: 0.03946208953857422 in 4 steps
+Level 0, solved with MinConfl  solved in: 0.01941061019897461 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.022637128829956055 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.016421079635620117 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.024555444717407227 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.02003765106201172 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.020629405975341797 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.019655466079711914 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.019214630126953125 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.026845455169677734 in 3 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.027476072311401367 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.01744818687438965 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.032267093658447266 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.016898632049560547 in 3 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.0192263126373291 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.02692723274230957 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.013540983200073242 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.01287388801574707 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.012903928756713867 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.016655683517456055 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.014971494674682617 in 3 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.01700282096862793 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.014086484909057617 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.017058372497558594 in 3 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.019436359405517578 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.013542413711547852 in 3 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.01469278335571289 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.015256404876708984 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.01621556282043457 in 4 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.020032167434692383 in 3 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.01674962043762207 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.016908645629882812 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.013821601867675781 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.016274452209472656 in 3 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.02365422248840332 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.020188570022583008 in 4 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.02093648910522461 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.009452104568481445 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.018923521041870117 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.018733501434326172 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.020045995712280273 in 2 steps
+Level 0, solved with MinConfl with Random Restart technique solved in: 0.01500391960144043 in 2 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.037499189376831055 in 7 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.042756080627441406 in 8 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.062009572982788086 in 15 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.03838062286376953 in 9 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.04900693893432617 in 8 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.056527137756347656 in 11 steps
+Level 1, solved with MinConfl  solved in: 0.03218841552734375 in 3 steps
+Level 1, solved with MinConfl  solved in: 0.06190800666809082 in 11 steps
+Level 1, solved with MinConfl  solved in: 0.049880027770996094 in 9 steps
+Level 1, solved with MinConfl  solved in: 0.1026613712310791 in 35 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.03618025779724121 in 5 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.0437929630279541 in 2 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.04611563682556152 in 5 steps
+Level 1, solved with MinConfl  solved in: 0.03957962989807129 in 5 steps
+Level 1, solved with MinConfl  solved in: 0.03870582580566406 in 6 steps
+Level 1, solved with MinConfl  solved in: 0.04712796211242676 in 9 steps
+Level 1, solved with MinConfl  solved in: 0.15209698677062988 in 48 steps
+Level 1, solved with MinConfl  solved in: 0.06659793853759766 in 13 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.08551454544067383 in 22 steps
+Level 1, solved with MinConfl  solved in: 0.03446626663208008 in 3 steps
+Level 1, solved with MinConfl  solved in: 0.040090084075927734 in 3 steps
+Level 1, solved with MinConfl  solved in: 0.039067745208740234 in 5 steps
+Level 1, solved with MinConfl  solved in: 0.026638269424438477 in 5 steps
+Level 1, solved with MinConfl  solved in: 0.06696105003356934 in 13 steps
+Level 1, solved with MinConfl  solved in: 0.0637214183807373 in 6 steps
+Level 1, solved with MinConfl  FAIL 
+Level 1, solved with MinConfl  solved in: 0.06150054931640625 in 12 steps
+Level 1, solved with MinConfl  solved in: 0.03455400466918945 in 6 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.05008983612060547 in 10 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.07040143013000488 in 15 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.05586051940917969 in 9 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.033020973205566406 in 2 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.7986929416656494 in 1007 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.08162164688110352 in 22 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.5530204772949219 in 1026 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.037317752838134766 in 5 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.08886408805847168 in 28 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.8489937782287598 in 1003 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.7578635215759277 in 1003 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.9261200428009033 in 1003 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.036193132400512695 in 5 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.05027651786804199 in 11 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.7905795574188232 in 1014 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.025320768356323242 in 4 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.4969804286956787 in 1003 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.036054134368896484 in 4 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.041559696197509766 in 4 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.03554034233093262 in 3 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.04912853240966797 in 4 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.824197769165039 in 1027 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.05000901222229004 in 13 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.9187488555908203 in 1017 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.02788090705871582 in 3 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.05956268310546875 in 13 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 7.441594123840332 in 5006 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.041723012924194336 in 8 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.6612842082977295 in 1009 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.03280901908874512 in 3 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.06763625144958496 in 21 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.0412297248840332 in 11 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.03641319274902344 in 7 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.03966236114501953 in 5 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.051610469818115234 in 10 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.0994715690612793 in 37 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.04819226264953613 in 7 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 1.923020839691162 in 1003 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.03782773017883301 in 4 steps
+Level 1, solved with MinConfl with Random Restart technique solved in: 0.04717516899108887 in 8 steps
+Level 2, solved with MinConfl  solved in: 0.27076101303100586 in 78 steps
+Level 2, solved with MinConfl  solved in: 0.16634321212768555 in 52 steps
+Level 2, solved with MinConfl  FAIL 
+Level 2, solved with MinConfl  solved in: 0.0978555679321289 in 14 steps
+Level 2, solved with MinConfl  solved in: 0.09685325622558594 in 23 steps
+Level 2, solved with MinConfl  solved in: 0.0976107120513916 in 6 steps
+Level 2, solved with MinConfl  solved in: 0.05843329429626465 in 2 steps
+Level 2, solved with MinConfl  solved in: 0.710536003112793 in 284 steps
+Level 2, solved with MinConfl  solved in: 0.11974024772644043 in 23 steps
+Level 2, solved with MinConfl  solved in: 0.07474827766418457 in 12 steps
+Level 2, solved with MinConfl  solved in: 0.3454303741455078 in 112 steps
+Level 2, solved with MinConfl  solved in: 0.15891385078430176 in 42 steps
+Level 2, solved with MinConfl  solved in: 0.1892859935760498 in 48 steps
+Level 2, solved with MinConfl  solved in: 0.3826766014099121 in 126 steps
+Level 2, solved with MinConfl  solved in: 0.06083250045776367 in 7 steps
+Level 2, solved with MinConfl  solved in: 0.16025209426879883 in 38 steps
+Level 2, solved with MinConfl  solved in: 0.12249231338500977 in 21 steps
+Level 2, solved with MinConfl  solved in: 0.21973061561584473 in 60 steps
+Level 2, solved with MinConfl  solved in: 0.29996752738952637 in 144 steps
+Level 2, solved with MinConfl  solved in: 0.10019135475158691 in 28 steps
+Level 2, solved with MinConfl  solved in: 0.15017390251159668 in 31 steps
+Level 2, solved with MinConfl  solved in: 0.12485527992248535 in 15 steps
+Level 2, solved with MinConfl  solved in: 0.056996822357177734 in 3 steps
+Level 2, solved with MinConfl  solved in: 0.13394451141357422 in 19 steps
+Level 2, solved with MinConfl  solved in: 0.12457418441772461 in 22 steps
+Level 2, solved with MinConfl  solved in: 0.14739060401916504 in 23 steps
+Level 2, solved with MinConfl  solved in: 0.08554553985595703 in 4 steps
+Level 2, solved with MinConfl  solved in: 0.09574723243713379 in 13 steps
+Level 2, solved with MinConfl  solved in: 0.23826909065246582 in 103 steps
+Level 2, solved with MinConfl  solved in: 0.08834028244018555 in 20 steps
+Level 2, solved with MinConfl  solved in: 0.07268953323364258 in 4 steps
+Level 2, solved with MinConfl  solved in: 0.13499975204467773 in 41 steps
+Level 2, solved with MinConfl  FAIL 
+Level 2, solved with MinConfl  solved in: 0.7861766815185547 in 285 steps
+Level 2, solved with MinConfl  solved in: 0.09914016723632812 in 10 steps
+Level 2, solved with MinConfl  solved in: 0.14397931098937988 in 23 steps
+Level 2, solved with MinConfl  solved in: 0.37487030029296875 in 145 steps
+Level 2, solved with MinConfl  solved in: 0.13336634635925293 in 23 steps
+Level 2, solved with MinConfl  solved in: 0.17764663696289062 in 69 steps
+Level 2, solved with MinConfl  solved in: 0.1299424171447754 in 37 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.16472101211547852 in 49 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 1.673609733581543 in 1028 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.08791851997375488 in 4 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.09203147888183594 in 9 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.09943175315856934 in 9 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 2.473234176635742 in 1024 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.15000128746032715 in 48 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.2662220001220703 in 88 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.07575273513793945 in 8 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 2.127866506576538 in 1027 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.1162271499633789 in 32 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.3066859245300293 in 119 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.28020691871643066 in 95 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.1847388744354248 in 84 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.1035468578338623 in 10 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.6143028736114502 in 246 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.09745478630065918 in 6 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.12239694595336914 in 20 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.19582557678222656 in 69 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.16461634635925293 in 23 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.10822343826293945 in 20 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.2541661262512207 in 103 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.34743547439575195 in 122 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.07171368598937988 in 10 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 1.9700984954833984 in 1081 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.0867311954498291 in 5 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.19492864608764648 in 65 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.17858195304870605 in 41 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.1795361042022705 in 68 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.33492159843444824 in 114 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.09699678421020508 in 12 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.1693437099456787 in 62 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.4469187259674072 in 164 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.15892863273620605 in 33 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.3587758541107178 in 110 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 2.170923948287964 in 1124 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.21695685386657715 in 56 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.08106160163879395 in 13 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.06458210945129395 in 2 steps
+Level 2, solved with MinConfl with Random Restart technique solved in: 0.0902400016784668 in 16 steps
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  solved in: 2.5611891746520996 in 857 steps
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl  FAIL 
+Level 3, solved with MinConfl with Random Restart technique solved in: 2.843005418777466 in 926 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 22.3039710521698 in 10182 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 30.191019535064697 in 14185 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 41.67700695991516 in 20408 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 50.85342073440552 in 24442 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 8.138732671737671 in 3081 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 37.745476722717285 in 18405 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 44.740500926971436 in 21580 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 37.15852117538452 in 18627 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 39.34747910499573 in 18633 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 59.75462317466736 in 28849 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 43.83244228363037 in 20603 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 146.5268256664276 in 72354 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 23.088557958602905 in 10719 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 2.0965707302093506 in 693 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 75.22612500190735 in 38357 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 14.367209434509277 in 6253 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 13.284579277038574 in 5570 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 12.783679962158203 in 5277 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 26.818750381469727 in 12858 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 14.869597673416138 in 6172 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 5.966282606124878 in 2052 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 45.7083101272583 in 22116 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 7.922775506973267 in 2750 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 15.001665830612183 in 6788 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 12.240658044815063 in 4831 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 31.0135715007782 in 15179 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 107.09654450416565 in 52421 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 16.16580820083618 in 6910 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 64.92496728897095 in 32217 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 16.12831449508667 in 7229 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 9.570542097091675 in 3524 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 11.839935541152954 in 4727 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 17.716116905212402 in 7736 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 5.567070007324219 in 1904 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 84.25093698501587 in 42384 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 5.5807271003723145 in 1964 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 5.649303436279297 in 2027 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 85.98285174369812 in 42884 steps
+Level 3, solved with MinConfl with Random Restart technique solved in: 21.342097520828247 in 9587 steps
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  solved in: 3.101517677307129 in 511 steps
+Level 4, solved with MinConfl  solved in: 2.2883384227752686 in 376 steps
+Level 4, solved with MinConfl  solved in: 4.6327197551727295 in 744 steps
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  solved in: 2.5355770587921143 in 404 steps
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  solved in: 5.231898307800293 in 839 steps
+Level 4, solved with MinConfl  solved in: 1.894665002822876 in 233 steps
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  solved in: 4.021511793136597 in 604 steps
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  solved in: 1.704129695892334 in 267 steps
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  solved in: 1.0049407482147217 in 151 steps
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl  FAIL 
+Level 4, solved with MinConfl with Random Restart technique solved in: 5.476546287536621 in 989 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 25.738102674484253 in 6575 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 42.83542823791504 in 8026 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 53.4834303855896 in 10431 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 17.988354206085205 in 2932 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 30.8132426738739 in 5929 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 60.967864990234375 in 12220 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 7.235935926437378 in 1039 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 10.7764573097229 in 1815 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 40.67102360725403 in 7609 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 14.285467624664307 in 2389 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 23.41703462600708 in 3820 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 17.75287699699402 in 3280 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 32.20697283744812 in 5684 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 13.187668323516846 in 1904 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 27.567583799362183 in 4502 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 19.069440126419067 in 3233 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 11.869818925857544 in 1770 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 26.65143370628357 in 5131 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 28.08502197265625 in 5082 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 9.352835893630981 in 1200 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 32.860148191452026 in 6143 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 11.588868141174316 in 1782 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 24.15618586540222 in 3866 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 6.499786853790283 in 895 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 26.820897817611694 in 4825 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 48.28018379211426 in 8474 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 2.6305253505706787 in 314 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 13.616840600967407 in 2710 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 9.810344696044922 in 1454 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 18.845332145690918 in 3591 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 12.153220653533936 in 1917 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 7.724305868148804 in 1132 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 21.893531799316406 in 4366 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 53.835957288742065 in 10404 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 13.880840301513672 in 2693 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 44.85660171508789 in 8772 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 9.853793382644653 in 1610 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 0.8902513980865479 in 62 steps
+Level 4, solved with MinConfl with Random Restart technique solved in: 14.90622615814209 in 2727 steps
 STOP
 
-Level 2, solved with MinConfl with Random Restart technique AVG TIME: 0.3609, AVG STEPS: 132.95
-Level 3, solved with MinConfl with Random Restart technique AVG TIME: 32.777, AVG STEPS: 15546.
-Level 4, solved with MinConfl with Random Restart technique AVG TIME: 17.830, AVG STEPS: 3707.6
+Level 0, solved with MinConfl AVG TIME: 0.0223, AVG STEPS: 2.525
+Level 0, solved with MinConfl with Random Restart technique AVG TIME: 0.0184, AVG STEPS: 2.275
+Level 1, solved with MinConfl AVG TIME: 0.0539, AVG STEPS: 10.518
+Level 1, solved with MinConfl with Random Restart technique AVG TIME: 0.7078, AVG STEPS: 409.92
+Level 2, solved with MinConfl AVG TIME: 0.1850, AVG STEPS: 52.894
+Level 2, solved with MinConfl with Random Restart technique AVG TIME: 0.4244, AVG STEPS: 180.47
+Level 3, solved with MinConfl AVG TIME: 2.5611891746520996, AVG STEPS: 857.0
+Level 3, solved with MinConfl with Random Restart technique AVG TIME: 32.192, AVG STEPS: 15323.
+Level 4, solved with MinConfl AVG TIME: 2.935033162434896, AVG STEPS: 458.77777777777777
+Level 4, solved with MinConfl with Random Restart technique AVG TIME: 18.794, AVG STEPS: 3416.8
