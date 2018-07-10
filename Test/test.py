@@ -1,4 +1,5 @@
 PATH = "Test/testResult.txt" 
+
 def writeReport(total_solving_time,steps,difficulty,solution_choice,smart_choice):
     report = "Level " + str(difficulty) + ", solved with"
     if solution_choice == 1:

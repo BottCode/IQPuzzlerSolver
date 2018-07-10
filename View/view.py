@@ -149,6 +149,7 @@ def startingDraw(fixed_shape, shape_array, solution_choice, smart_choice, diffic
             PG.event.post(test_mode_event)
             text_is_test_mode = "AV:"
 
+    # MAIN LOOP TO SOLVE IQPUZZLER
     while not done:
         for event in PG.event.get():  # User did something
             if event.type == PG.QUIT:  # If user clicked close

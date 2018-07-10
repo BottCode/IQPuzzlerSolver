@@ -23,7 +23,7 @@ def computeAverage():
         words = line.split()
         if "STOP" in words:
             break
-        print(line,line_number)
+        #print(line,line_number)
         if words[len(words) - 1] != "FAIL":
             total_time += float(words[len(words) - 4])
             total_steps += float(words[len(words) - 2])
