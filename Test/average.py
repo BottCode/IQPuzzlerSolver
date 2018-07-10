@@ -1,7 +1,7 @@
 PATH = "Test/testResult.txt"
 TABLE_LATEX_PATH ="Test/tableResult.txt"
 SCRIPT_PATH = "Test/scriptTest.sh"
-TEST_FOR_EACH_COMB = 40
+TEST_FOR_EACH_COMB = 153
 
 def computeAverage():
     open(TABLE_LATEX_PATH,"w").close()
